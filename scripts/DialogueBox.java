@@ -13,6 +13,7 @@ public class DialogueBox {
   
   public void draw(Graphics g){
     g.setColor(color.black);
+    g.drawRect(x + 5, y + 5, width - 10, height -10, 25, 25);
     g.fillRect(x, y, width, height);
     g.drawString()
   }

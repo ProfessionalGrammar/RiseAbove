@@ -6,9 +6,9 @@ public class DialogueBox {
   int height;
   
   public DialogueBox(String msg, UI ui){
-    y = ui.window.getHeight() / 5;
+    y = ui.window.getHeight() - (ui.window.getHeight() / 5);
     width = ui.window.getWidth();
-    height = ui.window.getHeight() - y;
+    height = ui.window.getHeight() / 5;
   }
   
   public void draw(Graphics g){

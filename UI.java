@@ -5,6 +5,7 @@ public class UI {
   
   public UI(GameManager g){
     gm = g;
+    createWindow();
   }
   
   public void createWindow (){

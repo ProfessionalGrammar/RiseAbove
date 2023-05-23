@@ -9,8 +9,8 @@ public class UI {
   }
   
   public void createWindow (){
-    window = new JFrame (1400, 800);
-    window.setSize();
+    window = new JFrame ();
+    window.setSize(1400, 800);
     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     window.setLayout(null);
   }

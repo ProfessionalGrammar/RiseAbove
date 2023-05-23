@@ -2,10 +2,13 @@ import javax.swing.*;
 public class UI {
   GameManager gm;
   JFrame window;
+  DialogueBox msgBox;
   
-  public UI(GameManager g){
+  public UI(GameManager g, DialogueBox box){
     gm = g;
+    msgBox = box;
     createWindow();
+    window.setVisible(true);
   }
   
   public void createWindow (){

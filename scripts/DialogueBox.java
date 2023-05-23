@@ -1,20 +1,18 @@
-public class DialogueBox {
-  String message;
-  int x = 0;
-  int y;
-  int width;
-  int height;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+
+public class DialogueBox extends JPanel{
+  String text;
   
-  public DialogueBox(String msg, UI ui){
-    y = ui.window.getHeight() - (ui.window.getHeight() / 5);
-    width = ui.window.getWidth();
-    height = ui.window.getHeight() / 5;
+  public DialogueBox(String txt){
+    text = txt;
   }
   
   public void draw(Graphics g){
     g.setColor(color.black);
-    g.drawRect(x + 5, y + 5, width - 10, height -10, 25, 25);
-    g.fillRect(x, y, width, height);
+    g.drawRect(5, 605, 1390, 190, 25, 25);
+    g.fillRect(0, 600, 1400, 200);
     g.drawString()
   }
 }

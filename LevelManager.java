@@ -1,5 +1,5 @@
 public class LevelManager {
-  GameManager gm = new gm (this);
+  GameManager gm = new GameManager (this);
   public LevelManager(){
     
   }

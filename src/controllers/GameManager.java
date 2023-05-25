@@ -30,14 +30,19 @@ public class GameManager {
     /* We might want to create all this code as separate classes instead of methods*/
     private void initializeGame() {
         // Initialize game state, load assets, set up initial game objects, etc.
+        gameState.setLevel(1);
     }
 
     private void processInput() {
         // Handle user input events such as mouse clicks, key presses, etc.
+        // Check user actions and update game state accordingly
+        // Handle interactive events and outcomes
     }
 
     private void updateGameState() {
         // Update game state based on user input, game logic, etc.
+        // Manage level and scene progression based on game state and user actions
+        // Determine outcomes based on user actions and update game state accordingly    
     }
 
     private void render() {

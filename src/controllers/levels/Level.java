@@ -10,10 +10,10 @@ public class Level {
   
   public void startLevel() {
         // Perform initialization tasks
-        initializeGame();
+        initializeLevel();
 
-        // Start the game loop
-        while (!gameState.isGameOver()) {
+        // Start the level loop
+        while (!gameState.isLevelOver()) {
             // Process user input
             processInput();
 
@@ -29,9 +29,9 @@ public class Level {
     }
 
     /* We might want to create all this code as separate classes instead of methods*/
-    private void initializeGame() {
+    private void initializeLevel() {
         // Initialize game state, load assets, set up initial game objects, etc.
-        gameState.setLevel(1);
+      gameState.setScene(1);
     }
 
     private void processInput() {

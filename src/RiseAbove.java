@@ -7,12 +7,12 @@ public class RiseAbove {
    
    boolean gameRun = true;
 
-   public DriverClass() {
+   public RiseAbove() {
       frame = new JFrame("Rise Above Mental Health Simulator");
    }
 
    public static void main(String[] args) {
-      DriverClass defaultRun = new DriverClass();
+      RiseAbove defaultRun = new RiseAbove();
       SwingUtilities.invokeLater(() -> new SplashScreen(frame));
       
       

@@ -47,7 +47,6 @@ public class GameManager {
 
     private void render() {
         // Render the game view based on the current game state
-        gameView.render(gameState);
     }
 
     private void cleanUp() {

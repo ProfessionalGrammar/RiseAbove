@@ -1,4 +1,4 @@
-class HelpPanel extends JPanel{
+class InstructionsPanel extends JPanel{
 
 	//Image helpbkg = new ImageIcon("").getImage();
 	JButton back = new JButton("Back"); 

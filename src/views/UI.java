@@ -15,6 +15,7 @@ public class UI extends JFrame{
     window = new JFrame ();
     window.setSize(1400, 800);
     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    window.setResizable(false);
     window.setLayout(null);
   }
 }

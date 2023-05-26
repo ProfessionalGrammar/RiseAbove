@@ -18,4 +18,5 @@ public class UI extends JFrame{
     window.setResizable(false);
     window.setLayout(null);
   }
+  
 }

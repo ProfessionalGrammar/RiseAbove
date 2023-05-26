@@ -24,7 +24,7 @@ public class GameManager {
         }
 
         // Perform cleanup tasks
-        cleanUp();
+        endGame();
     }
 
     /* We might want to create all this code as separate classes instead of methods*/
@@ -49,7 +49,7 @@ public class GameManager {
         // Render the game view based on the current game state
     }
 
-    private void cleanUp() {
+    private void endGame() {
         // Perform cleanup tasks such as releasing resources, saving game state, etc.
     }
 }

@@ -4,16 +4,9 @@ import java.awt.*;
 public class UI extends JFrame{
   GameManager gm;
   JFrame window;
-  DialogueBox message;
   
-  public UI(GameManager g, DialogueBox msg){
+  public UI(GameManager g){
     gm = g;
-    message = msg;
-    
-    public void ActionPerformed (ActionEvent e){
-       InputHandler.handleInput(); 
-    }
-    
     createWindow();
     window.setVisible(true);
   }

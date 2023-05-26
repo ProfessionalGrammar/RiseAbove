@@ -12,7 +12,7 @@ public class UI extends JFrame{
   }
   
   public void createWindow (){
-    window = new JFrame ();
+    window = new JFrame ("Rise Above");
     window.setSize(1400, 800);
     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     window.setResizable(false);

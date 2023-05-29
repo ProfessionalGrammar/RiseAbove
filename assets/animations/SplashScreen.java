@@ -4,7 +4,6 @@ Date: 2023-05-28th final edit
 Description: Submission of semi-functional splash screen animation. 
 
 
-
 */
 
    
@@ -15,11 +14,12 @@ import java.util.Scanner;
 public class SplashScreen {
 
 
-   public SplashScreen(JFrame frame) {
+   public SplashScreen() {
+   JFrame frame = new JFrame ("Rise Above Mental Health Simulator: SplashScreen");
       frame.setSize(1400, 800);
    
-      Drawing draw = new Drawing();
-      frame.add(draw);
+      Drawing draw1 = new Drawing();
+      frame.add(draw1);
       frame.setVisible(true);
    
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -42,7 +42,7 @@ public class SplashScreen {
                step++;
                repaint(); // Trigger repaint to update the graphics
                if (step >= 7) {
-                  timer.stop(); // Stop the timer after 6 steps
+                  timer.stop(); // Stop the timer after 7 steps
                }
             });
          timer.start(); // Start the timer

@@ -19,4 +19,15 @@ public class UI {
     window.setLayout(null);
   }
   
+  public void addBackground(){
+    
+  }
+  
+  public void addObject() {
+    
+  }
+  
+  public void addScene() {
+    
+  }
 }

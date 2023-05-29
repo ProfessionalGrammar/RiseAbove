@@ -8,19 +8,39 @@ Description: Submission of semi-functional splash screen animation.
 
    
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 import java.util.Scanner;
 
 public class SplashScreen {
 
+   public static boolean splashScreenExit = false;
+   private static boolean splashFinished  = false;
+
 
    public SplashScreen() {
-   JFrame frame = new JFrame ("Rise Above Mental Health Simulator: SplashScreen");
+      JFrame frame = new JFrame ("Rise Above Mental Health Simulator: SplashScreen");
       frame.setSize(1400, 800);
    
       Drawing draw1 = new Drawing();
       frame.add(draw1);
       frame.setVisible(true);
+      
+      
+      frame.addKeyListener(
+         new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+            
+            
+               if (splashFinished ){ 
+                 
+                  splashScreenExit = true;
+                  frame.dispose(); // Close the JFrame
+               
+               }
+            }
+         });
    
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       
@@ -42,6 +62,7 @@ public class SplashScreen {
                step++;
                repaint(); // Trigger repaint to update the graphics
                if (step >= 7) {
+                  splashFinished = true;
                   timer.stop(); // Stop the timer after 7 steps
                }
             });

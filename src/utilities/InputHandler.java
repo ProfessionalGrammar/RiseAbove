@@ -1,7 +1,12 @@
 import java.awt.*;
 
 public class InputHandler implements EventListener { 
-
+  GameObject[] objects;
+  
+  public InputHandler (GameObject[] curObj){
+    objects = curObj;
+  }
+  
   public void keyTyped (KeyEvent e){
     
   }
@@ -15,8 +20,11 @@ public class InputHandler implements EventListener {
   }
   
   public void mouseClicked(MouseEvent e) {
-    getX()
-    getY()     
+    int x = getX();
+    int y = getY();
+    for(GameObject obj: objects) {
+     
+    }
   }
   
   public void mousePressed(MouseEvent e) {

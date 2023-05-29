@@ -15,8 +15,10 @@ public class InputHandler implements EventListener {
   }
   
   public void mouseClicked(MouseEvent e) {
-       
+    getX()
+    getY()     
   }
+  
   public void mousePressed(MouseEvent e) {
        
   }

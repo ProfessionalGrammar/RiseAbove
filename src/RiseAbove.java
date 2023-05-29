@@ -1,30 +1,30 @@
 
 import java.awt.*;
 import javax.swing.*;
+import java.util.*;
 
-public class RiseAbove {
-   public static JFrame frame;
-   
-   boolean gameRun = true;
+public class RiseAbove {   
 
    public RiseAbove() {
-      frame = new JFrame("Rise Above Mental Health Simulator");
+   
    }
 
    public static void main(String[] args) {
-      RiseAbove defaultRun = new RiseAbove();
-      SwingUtilities.invokeLater(() -> new SplashScreen(frame));
       
+      boolean gameRun = true;
       
-      /*
-      while(gameRun){
-       
-         new MainMenu(frame);
-      
+      SwingUtilities.invokeLater(() -> new SplashScreen()); // splash screen and game title page call
+      while (gameRun) {         
+         if (SplashScreen.splashScreenExit) {
+         
+            System.out.println(SplashScreen.splashScreenExit);
+         
+            new MainMenu();
+            SplashScreen.splashScreenExit = false;
+         
+         }
       }
-      
-      */
-      
-      
+     
+             
    }
 }

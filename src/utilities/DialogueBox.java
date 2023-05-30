@@ -15,7 +15,6 @@ public class DialogueBox extends JPanel{
     messageText.setWrapStyleWord(true);
     messageText.setFont(new Font("Book Antiqua", Font.PLAIN, 30));
     window.add(messageText);
-    
   }
   
   public void setText(String txt){

@@ -12,7 +12,9 @@ public class InputHandler implements EventListener {
   }
   
   public void keyPressed (KeyEvent e){
+    int code = e.getKeyCode();
     
+    if()
   }
   
   public void keyReleased (KeyEvent e){

@@ -3,7 +3,8 @@ import java.awt.Font;
 import java.awt.Graphics;
 
 public class DialogueBox extends JPanel{  
-  JTextArea messageText;
+  private static JTextArea messageText;
+  
   public DialogueBox(String txt){
     messageText = new JTextArea(txt);
     messageText.setBounds(75, 550, 1250, 200);
@@ -14,7 +15,6 @@ public class DialogueBox extends JPanel{
     messageText.setWrapStyleWord(true);
     messageText.setFont(new Font("Book Antiqua", Font.PLAIN, 30));
     window.add(messageText);
-      
-
+    
   }
 }

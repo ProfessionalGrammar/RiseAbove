@@ -17,4 +17,8 @@ public class DialogueBox extends JPanel{
     window.add(messageText);
     
   }
+  
+  public void setText(String txt){
+   messageText.setText(txt); 
+  }
 }

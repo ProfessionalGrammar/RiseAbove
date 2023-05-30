@@ -62,10 +62,12 @@ public class InputHandler implements EventListener {
   }
   
   public void mouseClicked(MouseEvent e) {
-    int x = getX();
-    int y = getY();
-    for(GameObject obj: objects) {
+    if(state.isPointClick()){
+      int x = getX();
+      int y = getY();
+      for(GameObject obj: objects) {
      
+      }
     }
   }
   

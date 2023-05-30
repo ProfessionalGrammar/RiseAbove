@@ -18,7 +18,7 @@ public class DialogueBox extends JPanel{
     messageText.setFont(new Font("Book Antiqua", Font.PLAIN, 30));
     window.add(messageText);
       
-      
+
   }
   
   

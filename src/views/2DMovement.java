@@ -11,6 +11,8 @@ public class 2DMovement extends JPanel implements Runnable {
   final int screenWidth = tileSize * maxScreenCol;
   final int screenHeight = tileSize * maxScreenRow;
   
+  int FPS = 60;
+  
   InputHandler handler = new InputHandler();
   Thread gameThread;
   GameState state;

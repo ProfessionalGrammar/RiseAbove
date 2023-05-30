@@ -15,6 +15,10 @@ public class 2DMovement extends JPanel implements Runnable {
   Thread gameThread;
   GameState state;
   
+  int playerX = 100;
+  int playerY = 100;
+  int playerSpeed = 4;
+  
   public 2DMovement (GameState curState){
     state = curState;
     state.set2D(true);
@@ -22,6 +26,7 @@ public class 2DMovement extends JPanel implements Runnable {
     this.setBackground();
     this.setDoubleBuffered(true);
     this.addEventListener(handler);
+    this.setFocusable(true);
     
   }
   
@@ -38,13 +43,27 @@ public class 2DMovement extends JPanel implements Runnable {
   }
   
   public void update(){
+    if(handler.upPressed = true){
+      playerY += playerSpeed;
+    }
     
+    if(handler.downPressed = true){
+      playerY -= playerSpeed;
+    }
+    
+    if(handler.rightPressed = true){
+      playerX += playerSpeed;
+    }
+    
+    if(handler.leftPressed = true){
+      playerX -= playerSpeed;
+    }
   }
   
   public void paintComponent(Graphics g) {
     super.paintComponent(g);
     Graphics2D g2 = (Graphics2D)g;
-    g2.drawCharacter();
+    g2.drawCharacter(playerX, playerY, tileSize, tileSize);
     g2.dispose();
   }
   

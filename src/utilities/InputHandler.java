@@ -3,7 +3,7 @@ import java.awt.*;
 public class InputHandler implements EventListener { 
   GameObject[] objects;
   GameState state;
-  public boolean upPressed, downPressed, leftPressed, rightPressed;
+  public boolean upPressed, downPressed, leftPressed, rightPressed, interact;
   
   public InputHandler (GameObject[] curObj, GameState curState){
     objects = curObj;
@@ -54,6 +54,9 @@ public class InputHandler implements EventListener {
       
       if(code == KeyEvent.VK_D){
         rightPressed = false;
+      }
+      if(code == KeyEvent.VK_E){
+        interact = true;
       }
     }
   }

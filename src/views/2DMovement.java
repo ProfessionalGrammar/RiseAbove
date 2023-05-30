@@ -11,12 +11,17 @@ public class 2DMovement extends JPanel implements Runnable {
   final int screenWidth = tileSize * maxScreenCol;
   final int screenHeight = tileSize * maxScreenRow;
   
+  InputHandler handler;
   Thread gameThread;
+  GameState state;
   
-  public 2DMovement (){
+  public 2DMovement (GameState curState){
+    state = curState;
+    state.set2D(true);
     this.setPreferredSize(new Dimension(screenWidth, screenHeight));
     this.setBackground();
     this.setDoubleBuffered(true);
+    
   }
   
   public void startGameThread (){

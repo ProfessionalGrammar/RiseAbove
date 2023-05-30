@@ -2,13 +2,10 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
-public class DialogueBox extends JPanel{
-  String text;
-  
+public class DialogueBox extends JPanel{  
+  JTextArea messageText;
   public DialogueBox(String txt){
-    text = txt;
-    
-    messageText = new JTextArea(text);
+    messageText = new JTextArea(txt);
     messageText.setBounds(75, 550, 1250, 200);
     messageText.setBackground(Colour.black);
     messageText.setForeground(colour.white);
@@ -20,15 +17,4 @@ public class DialogueBox extends JPanel{
       
 
   }
-  
-  
-  
- /* public void draw(Graphics g){
-    g.setColor(color.black);
-    g.drawRect(5, 605, 1390, 190, 25, 25);
-    //g.drawRect(30, 600, 1340, 170);
-    g.fillRect(0, 600, 1400, 200);
-    g.drawString()
-  }*/
-  
 }

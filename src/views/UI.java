@@ -2,8 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class UI {
-  GameManager gm;
-  JFrame window;
+  private static GameManager gm;
+  private static JFrame window;
   
   public UI(GameManager g){
     gm = g;
@@ -11,7 +11,7 @@ public class UI {
     window.setVisible(true);
   }
   
-  public void createWindow (){
+  public static void createWindow (){
     window = new JFrame ("Rise Above");
     window.setSize(1400, 800);
     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,7 +19,7 @@ public class UI {
     window.setLayout(null);
   }
   
-  public void addScene() {
-    
+  public static void add(JTextArea textBox) {
+    window.add(textBox);
   }
 }

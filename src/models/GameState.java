@@ -3,6 +3,7 @@ public class GameState {
     private static int score;
     private static boolean isGameOver;
     private static boolean is2D;
+    private static boolean isPointClick;
     
     public GameState() {
         score = 0;
@@ -34,7 +35,11 @@ public class GameState {
         is2D = 2D;
     }
     
-    public static void updateState(GameState curState){
-        this = curState;
+    public static boolean isPointClick() {
+        return isPointClick;
+    }
+    
+    public static void setPointClick(boolean pointClick) {
+        isPointClick = pointClick;
     }
 }

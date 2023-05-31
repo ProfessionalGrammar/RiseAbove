@@ -11,4 +11,7 @@ public Player extends GameObject {
       setSpeed(4);
   }
   
+  public void draw(Graphics2D g2) {
+     //code to draw player
+  }
 }

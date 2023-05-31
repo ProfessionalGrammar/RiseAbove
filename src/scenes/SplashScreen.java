@@ -3,7 +3,6 @@ Name: Yi Song Ding
 Date: 2023-05-28th final edit
 Description: Submission of semi-functional splash screen animation. 
 
-
 */
 
    
@@ -211,16 +210,7 @@ public class SplashScreen {
             g.fillPolygon(leafX8, leafY8, leafX8.length);
             g.setColor(Color.black);
             g.drawPolygon(leafX8, leafY8, leafX8.length);
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+         
             
             // first intra-leaf lines
              
@@ -267,15 +257,13 @@ public class SplashScreen {
             // sixth bottom left intra-leaf lines
             
             g.drawLine(395, 472, 450, 518);
-            g.drawLine(450, 518, 487, 575);
-           
+            g.drawLine(450, 518, 487, 575); 
             
             g.drawLine(388, 612, 449, 586);
             g.drawLine(449, 586, 488, 577);
             g.drawLine(488, 577, 534, 531);
             g.drawLine(534, 531, 572, 492);
-            
-              
+           
             
             // seventh bottom leaf intra-leaf lines
             
@@ -298,9 +286,7 @@ public class SplashScreen {
             
             g2d.setStroke(oldStroke);
             
-           
-            
-            
+      
             // draws the connecting vines between each leaf
             
             g2d.setStroke(thickStroke);
@@ -331,35 +317,36 @@ public class SplashScreen {
             g.drawLine(595, 506, 629, 499);
             
             g.drawLine(762, 497, 791, 509);
-            
-            
-            
-            
+                      
             g2d.setStroke(oldStroke);
             
             
             // bounding box and text to continue to main menu
             g.setColor(Color.white);
-            
-            
+          
             g.setFont(new Font("Roboto", Font.PLAIN, 20));
             g.drawString("Press any key to continue to MAIN MENU", 900, 700);
             
             g2d.setStroke(thickerStroke);
             g.drawRect(888,656, 414, 64);
-            g2d.setStroke(oldStroke);
-            
-            
-            
-            
-            
-            
-            
-         }
-         
-         
-         
+            g2d.setStroke(oldStroke);       
+         } 
       }
    }
-
+   
+   public void display () {
+    boolean gameRun = true;
+      
+      SwingUtilities.invokeLater(() -> new SplashScreen()); // splash screen and game title page call
+      while (gameRun) {         
+         if (SplashScreen.splashScreenExit) {
+         
+            System.out.println(SplashScreen.splashScreenExit);
+         
+            new MainMenu();
+            SplashScreen.splashScreenExit = false;
+         
+         }
+      }  
+   }
 }

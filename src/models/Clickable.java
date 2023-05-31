@@ -1,1 +1,5 @@
 
+public Clickable extends GameObject {
+ 
+  
+}

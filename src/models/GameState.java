@@ -4,11 +4,13 @@ public class GameState {
     private static boolean isGameOver;
     private static boolean is2D;
     private static boolean isPointClick;
-    
+    private static boolean isCorrectAns;
+        
     public GameState() {
         score = 0;
         isGameOver = false;
         is2D = false;
+        isCorrectAns = false;
     }
 
     public static int getScore() {
@@ -41,5 +43,13 @@ public class GameState {
     
     public static void setPointClick(boolean pointClick) {
         isPointClick = pointClick;
+    }
+    
+    public static boolean isCorrectAns() {
+        return isCorrectAns;
+    }
+    
+    public void answer(boolean ans){
+        isCorrectAns = ans;   
     }
 }

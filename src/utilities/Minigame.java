@@ -3,7 +3,8 @@ import java.awt.Font;
 import java.awt.Graphics;
 
 public class Minigame extends JPanel{  
-  private static JTextArea messageText;
+  private JTextArea messageText;
+  private JButton[];   
   
   public Minigame(String txt){
     messageText = new JTextArea(txt);

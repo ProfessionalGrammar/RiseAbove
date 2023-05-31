@@ -3,7 +3,7 @@ public class GameObject {
  private int x;
  private int y;
  private int speed;
- public GameObject (int objx, int objy, int objWidth, int objHeight) {
+ public GameObject (int objx, int objy) {
   x = objx;
   y = objy;
   

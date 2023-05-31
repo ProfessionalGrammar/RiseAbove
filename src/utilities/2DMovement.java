@@ -16,6 +16,7 @@ public class 2DMovement extends JPanel implements Runnable {
   InputHandler handler = new InputHandler();
   Thread gameThread;
   GameState state;
+  Player player = new Player(this, handler);
   
   int playerX = 100;
   int playerY = 100;
@@ -60,26 +61,26 @@ public class 2DMovement extends JPanel implements Runnable {
   
   public void update(){
     if(handler.upPressed = true){
-      playerY += playerSpeed;
+      Player.setY(Player.getY() + Player.getSpeed());
     }
     
     if(handler.downPressed = true){
-      playerY -= playerSpeed;
+      Player.setY(Player.getY() - Player.getSpeed());
     }
     
     if(handler.rightPressed = true){
-      playerX += playerSpeed;
+      Player.setX(Player.getX() + Player.getSpeed());
     }
     
     if(handler.leftPressed = true){
-      playerX -= playerSpeed;
+      Player.setX(Player.getX() - Player.getSpeed());
     }
   }
   
   public void paintComponent(Graphics g) {
     super.paintComponent(g);
     Graphics2D g2 = (Graphics2D)g;
-    g2.drawCharacter(playerX, playerY, tileSize, tileSize);
+    player.draw(g2);
     g2.dispose();
   }
   

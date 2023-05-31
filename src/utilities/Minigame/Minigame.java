@@ -28,6 +28,7 @@ public class MiniGame extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(panel, "Correct!");
+                state.answer(true);
             }
         });
 
@@ -35,6 +36,7 @@ public class MiniGame extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(panel, "Incorrect!");
+                state.answer(false);
             }
         });
    }

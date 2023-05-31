@@ -49,7 +49,7 @@ public class GameState {
         return isCorrectAns;
     }
     
-    public void answer(boolean ans){
+    public static void answer(boolean ans){
         isCorrectAns = ans;   
     }
 }

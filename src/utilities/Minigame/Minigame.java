@@ -11,6 +11,7 @@ public class MiniGame extends JPanel {
     public String question;
     public String option1;
     public String option2;
+    public GameState state;
 
     public MiniGame(String question, String option1, String option2) {        
         panel = new JPanel();

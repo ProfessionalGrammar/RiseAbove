@@ -1,5 +1,6 @@
 
 public Player extends GameObject {
+  private int speed;
   2DMovement move;
   InputHandler handler;
   
@@ -8,10 +9,18 @@ public Player extends GameObject {
       handler = ih;
       setX(100);
       setY(100);
-      setSpeed(4);
+      speed = 4;
   }
   
-  public void draw(Graphics2D g2) {
+ public int getSpeed () {
+  return speed;
+ }
+ 
+ public void setSpeed (int spd) {
+  speed = spd;
+ }
+  
+ public void draw(Graphics2D g2) {
      //code to draw player
   }
 }

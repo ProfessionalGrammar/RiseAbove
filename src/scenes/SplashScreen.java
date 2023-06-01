@@ -11,39 +11,31 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.Scanner;
 
-public class SplashScreen {
+public class SplashScreen extends Scene{
 
    public static boolean splashScreenExit = false;
    private static boolean splashFinished  = false;
+   private UI ui;
 
-
-   public SplashScreen() {
-      JFrame frame = new JFrame ("Rise Above Mental Health Simulator: SplashScreen");
-      frame.setSize(1400, 800);
+   public SplashScreen(UI ui) {
+      this.ui = ui;
    
       Drawing draw1 = new Drawing();
-      frame.add(draw1);
-      frame.setVisible(true);
+      this.add(draw1);      
       
-      
-      frame.addKeyListener(
+      this.addKeyListener(
          new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
             
-            
                if (splashFinished ){ 
                  
                   splashScreenExit = true;
-                  frame.dispose(); // Close the JFrame
+                  ui.remove(this); // Remove the panel
                
                }
             }
-         });
-   
-      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      
-      
+         });      
    }
 
    public static class Drawing extends JComponent {

@@ -1,81 +1,81 @@
 import java.awt.event.*;
 
 public class InputHandler implements EventListener {
-  GameObject[] objects;
-  GameState state;
-  public boolean upPressed, downPressed, leftPressed, rightPressed, interact;
+  private static GameObject[] objects;
+  private static GameState state;
+  public static boolean upPressed, downPressed, leftPressed, rightPressed, interact;
   
-  public InputHandler (GameObject[] curObj, GameState curState){
+  public InputHandler(GameObject[] curObj, GameState curState) {
     objects = curObj;
     state = curState;
   }
   
-  public void keyTyped(KeyEvent e){
+  public static void keyTyped(KeyEvent e) {
     
   }
   
-  public void keyPressed(KeyEvent e){
+  public static void keyPressed(KeyEvent e) {
     int code = e.getKeyCode();
     
-    if(state.is2D == true) {
-      if(code == KeyEvent.VK_W){
+    if (state.is2D == true) {
+      if (code == KeyEvent.VK_W) {
         upPressed = true;
       }
       
-      if(code == KeyEvent.VK_A){
+      if (code == KeyEvent.VK_A) {
         leftPressed = true;
       }
       
-      if(code == KeyEvent.VK_S){
+      if (code == KeyEvent.VK_S) {
         downPressed = true;
       }
       
-      if(code == KeyEvent.VK_D){
+      if (code == KeyEvent.VK_D) {
         rightPressed = true;
       }
     }
   }
   
-  public void keyReleased(KeyEvent e){
+  public static void keyReleased(KeyEvent e) {
     int code = e.getKeyCode();
 
-    if(state.is2D == true) {
-      if(code == KeyEvent.VK_W){
+    if (state.is2D == true) {
+      if (code == KeyEvent.VK_W) {
         upPressed = false;
       }
       
-      if(code == KeyEvent.VK_A){
+      if (code == KeyEvent.VK_A) {
         leftPressed = false;
       }
       
-      if(code == KeyEvent.VK_S){
+      if (code == KeyEvent.VK_S) {
         downPressed = false;
       }
       
-      if(code == KeyEvent.VK_D){
+      if (code == KeyEvent.VK_D) {
         rightPressed = false;
       }
-      if(code == KeyEvent.VK_E){
+      if (code == KeyEvent.VK_E) {
         interact = true;
       }
     }
   }
   
-  public void mouseClicked(MouseEvent e) {
-    if(state.isPointClick()){
+  public static void mouseClicked(MouseEvent e) {
+    if (state.isPointClick()) {
       int x = e.getX();
       int y = e.getY();
-      for(GameObject obj: objects) {
+      for (GameObject obj : objects) {
         // Process the click event for each game object
       }
     }
   }
   
-  public void mousePressed(MouseEvent e) {
+  public static void mousePressed(MouseEvent e) {
        
   }
   
-  public void mouseReleased(MouseEvent e) {
+  public static void mouseReleased(MouseEvent e) {
        
   }
 }

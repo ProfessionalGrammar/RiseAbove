@@ -1,5 +1,0 @@
-public class l2scene1 extends JPanel{
-   public void paint(Graphics g) {
-    g.drawString("l2scene1", 0, 0);
-   }
-}

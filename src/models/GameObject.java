@@ -2,9 +2,12 @@
 public class GameObject {
  private int x;
  private int y;
- public GameObject (int objx, int objy) {
+ InputHandler handler;
+ 
+ public GameObject (int objx, int objy, InputHandler hndl) {
   x = objx;
   y = objy;
+  handler = hndl;
   
  }
  

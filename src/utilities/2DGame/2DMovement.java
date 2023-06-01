@@ -1,27 +1,25 @@
 java.awt.*;
 java.swing.*;
 
-public class 2DMovement extends JPanel implements Runnable {
+public class 2DMovement implements Runnable {
   
   int FPS = 60;
   
   InputHandler handler = new InputHandler();
   Thread gameThread;
   GameState state;
+  JPanel panel;
   Player player = new Player(this, handler);
   
-  int playerX = 100;
-  int playerY = 100;
-  int playerSpeed = 4;
-  
-  public 2DMovement (GameState curState){
+  public 2DMovement (GameState curState, JPanel pnl){
     state = curState;
     state.set2D(true);
-    this.setPreferredSize(new Dimension(screenWidth, screenHeight));
-    this.setBackground();
-    this.setDoubleBuffered(true);
-    this.addEventListener(handler);
-    this.setFocusable(true);
+    panel = pnl;
+    panel.setPreferredSize(new Dimension(screenWidth, screenHeight));
+    panel.setBackground();
+    panel.setDoubleBuffered(true);
+    panel.addEventListener(handler);
+    panel.setFocusable(true);
     
   }
   

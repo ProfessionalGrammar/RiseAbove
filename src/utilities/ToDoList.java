@@ -13,7 +13,7 @@ public class ToDoList extends JPanel{
     toDoBox.setEditable(false);
     toDoBox.setLineWrap(true);
     toDoBox.setWrapStyleWord(true);
-    toDoBox.setFont(new Font("Book Antiqua", Font.PLAIN, 30));
+    toDoBox.setFont(new Font("Book Antiqua", Font.PLAIN, 20));
     window.add(toDoBox);
   }
   

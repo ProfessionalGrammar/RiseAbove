@@ -1,6 +1,6 @@
-import java.awt.*;
+import java.awt.event.*;
 
-public class InputHandler implements EventListener { 
+public class InputHandler implements EventListener {
   GameObject[] objects;
   GameState state;
   public boolean upPressed, downPressed, leftPressed, rightPressed, interact;
@@ -10,11 +10,11 @@ public class InputHandler implements EventListener {
     state = curState;
   }
   
-  public void keyTyped (KeyEvent e){
+  public void keyTyped(KeyEvent e){
     
   }
   
-  public void keyPressed (KeyEvent e){
+  public void keyPressed(KeyEvent e){
     int code = e.getKeyCode();
     
     if(state.is2D == true) {
@@ -36,7 +36,7 @@ public class InputHandler implements EventListener {
     }
   }
   
-  public void keyReleased (KeyEvent e){
+  public void keyReleased(KeyEvent e){
     int code = e.getKeyCode();
 
     if(state.is2D == true) {
@@ -63,10 +63,10 @@ public class InputHandler implements EventListener {
   
   public void mouseClicked(MouseEvent e) {
     if(state.isPointClick()){
-      int x = getX();
-      int y = getY();
+      int x = e.getX();
+      int y = e.getY();
       for(GameObject obj: objects) {
-     
+        // Process the click event for each game object
       }
     }
   }

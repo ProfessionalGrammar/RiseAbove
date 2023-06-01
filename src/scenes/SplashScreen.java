@@ -9,7 +9,6 @@ Description: Submission of semi-functional splash screen animation.
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import java.util.Scanner;
 
 public class SplashScreen extends Scene{
 

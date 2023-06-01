@@ -55,6 +55,7 @@ public class InputHandler implements EventListener {
       if (code == KeyEvent.VK_D) {
         rightPressed = false;
       }
+      
       if (code == KeyEvent.VK_E) {
         interact = true;
       }

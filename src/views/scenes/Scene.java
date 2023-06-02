@@ -1,6 +1,8 @@
 
 public abstract class Scene extends JPanel {
- public void display(){
-   
+ JTextArea dialogue;
+ 
+ public void addDialogue(JTextArea box){
+    this.add(box);
  }
 }

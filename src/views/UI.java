@@ -19,7 +19,7 @@ public class UI {
     window.setLayout(null);
   }
   
-  public static void add(JTextArea textBox) {
-    window.add(textBox);
+  public static void add(JPanel scene) {
+    window.add(scene);
   }
 }

@@ -2,9 +2,9 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
-public class DialogueBox extends JTextArea{  
+public class TextBox extends JTextArea{  
   
-  public DialogueBox(String txt){
+  public TextBox(String txt){
     this = new JTextArea(txt);
     this.setBounds(75, 550, 1250, 200);
     this.setBackground(Colour.black);

@@ -4,6 +4,7 @@ import java.awt.*;
 public class UI {
   private static GameManager gm;
   private static JFrame window;
+  private static JPanel curScene;
   
   public UI(GameManager g){
     gm = g;
@@ -20,6 +21,7 @@ public class UI {
   }
   
   public static void add(JPanel scene) {
+    curScene = scene;
     window.add(scene);
   }
 }

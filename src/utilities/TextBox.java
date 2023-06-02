@@ -4,9 +4,9 @@ import java.awt.Graphics;
 
 public class TextBox extends JTextArea{  
   
-  public TextBox(String txt){
+  public TextBox(String txt, int x, int y, int width, int height){
     this = new JTextArea(txt);
-    this.setBounds(75, 550, 1250, 200);
+    this.setBounds(x, y, width, height);
     this.setBackground(Colour.black);
     this.setForeground(colour.white);
     this.setEditable(false);

@@ -1,5 +1,5 @@
 
-public abstract class Scene extends JPanel {
+public abstract class Scene extends JLayeredPane {
  JTextArea dialogue;
  
  public void addTextBox(JTextArea box){

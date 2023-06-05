@@ -3,7 +3,7 @@ import javax.swing.*;
 
 
 
-public class MainMenu {
+public class MainMenu extends Scene{
 
    DrawingOfMenu draw2 = new DrawingOfMenu();
 

@@ -1,4 +1,4 @@
-package controllerss;
+package controllers;
 public class GameManager {
   private GameState gameState;
   private UI window;

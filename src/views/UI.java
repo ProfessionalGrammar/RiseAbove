@@ -1,9 +1,10 @@
+package views;
 import javax.swing.*;
 import java.awt.*;
 
 public class UI extends JFrame{
   private static GameManager gm;
-  private static JLayeredPane curScene;
+  private static JPanel curScene;
   
   public UI(GameManager g){
     gm = g;

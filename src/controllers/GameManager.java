@@ -1,3 +1,4 @@
+package controllerss;
 public class GameManager {
   private GameState gameState;
   private UI window;

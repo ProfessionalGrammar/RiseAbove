@@ -7,17 +7,20 @@ public abstract class Scene extends JPanel {
   this.add(pane);
  }
  
+ public void addBackground(JPanel panel){
+   pane.add(panel, new Integer(0));
+ }
  
  public void addTextBox(TextBox box){
   dialogue = box;  
-  pane.add(box, new Integer(0));
+  pane.add(box, new Integer(1));
  }
  
  public void addButton(Button button){
-   this.add(button, new Integer(1));
+   pane.add(button, new Integer(2));
  }
  
  public void addMinigame(Minigame minigame){
-   this.add(minigame, new Integer(2));
+   pane.add(minigame, new Integer(3));
  }
 }

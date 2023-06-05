@@ -1,5 +1,5 @@
 
-public class Buttons extends JButton {
+public class Button extends JButton {
 
   public Buttons (int x, int y, int width, int height, String fileName, String command, InputHandler handler){
     ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResources(fileName));

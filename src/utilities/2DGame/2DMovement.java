@@ -1,7 +1,7 @@
 java.awt.*;
 java.swing.*;
 
-public class 2DMovement implements Runnable {
+public class 2DMovement implements Runnable { 
   
   int FPS = 60;
   

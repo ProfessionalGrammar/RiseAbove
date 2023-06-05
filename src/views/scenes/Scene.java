@@ -7,7 +7,7 @@ public abstract class Scene extends JLayeredPane {
   this.add(box);
  }
  
- public void addButton(JButton button){
+ public void addButton(Button button){
    this.add(button);
  }
  

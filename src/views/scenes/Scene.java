@@ -10,14 +10,14 @@ public abstract class Scene extends JPanel {
  
  public void addTextBox(TextBox box){
   dialogue = box;  
-  this.add(box);
+  pane.add(box, new Integer(0));
  }
  
  public void addButton(Button button){
-   this.add(button);
+   this.add(button, new Integer(1));
  }
  
  public void addMinigame(Minigame minigame){
-   this.add(minigame);
+   this.add(minigame, new Integer(2));
  }
 }

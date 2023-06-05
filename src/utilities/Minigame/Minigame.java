@@ -23,12 +23,21 @@ public class MiniGame extends JPanel {
         for(int i = 0; i < optionButtons.length; i++){
             optionButtons[i] = new JButton(options[i])
             panel.add(optionButtons[i]);
-            optionButton[i].addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-                    JOptionPane.showMessageDialog(panel, "Incorrect!");
-                    state.answer(false);
-                }
-            });
+            if(isCorrect[i] = false) {
+                optionButton[i].addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        JOptionPane.showMessageDialog(panel, "Incorrect!");
+                        state.answer(false);
+                    }
+                });
+            else{
+                optionButton[i].addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        JOptionPane.showMessageDialog(panel, "Correct!");
+                        state.answer(true);
+                    }
+                });
+            }
         }
         
    }

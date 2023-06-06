@@ -3,7 +3,7 @@ package utilities.2DGame;
 import java.awt.*;
 import java.swing.*;
 
-public class 2DMovement implements Runnable { 
+public class Movement implements Runnable { 
   
   int FPS = 60;
   
@@ -13,7 +13,7 @@ public class 2DMovement implements Runnable {
   JPanel panel;
   Player player = new Player(this, handler);
   
-  public 2DMovement (GameState curState, JPanel pnl){
+  public Movement (GameState curState, JPanel pnl){
     state = curState;
     state.set2D(true);
     panel = pnl;

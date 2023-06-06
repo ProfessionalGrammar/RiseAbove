@@ -1,4 +1,4 @@
-package controllers;
+package controllers.levels;
 public class Level {
   private GameState gameState;
   private GameManager gm;

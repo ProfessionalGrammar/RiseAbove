@@ -1,3 +1,4 @@
+package utilities;
 import java.awt.event.*;
 
 public class InputHandler implements EventListener {

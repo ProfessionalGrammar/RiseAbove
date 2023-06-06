@@ -5,6 +5,7 @@ Description: Submission of semi-functional splash screen animation.
 
 */
 
+package views.scenes;
    
 import java.awt.*;
 import java.awt.event.*;

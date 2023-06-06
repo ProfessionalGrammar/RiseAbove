@@ -1,3 +1,5 @@
+package controllers.levels;
+
 public class Level2 extends Level {
   
   public Level2 (){

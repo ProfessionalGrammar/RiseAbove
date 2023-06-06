@@ -1,5 +1,7 @@
-java.awt.*;
-java.swing.*;
+package utilities.2DGame;
+
+import java.awt.*;
+import java.swing.*;
 
 public class 2DMovement implements Runnable { 
   

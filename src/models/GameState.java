@@ -1,4 +1,4 @@
-
+package models;
 public class GameState {
     private static int score;
     private static boolean isGameOver;

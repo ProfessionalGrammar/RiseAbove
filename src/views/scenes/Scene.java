@@ -1,3 +1,4 @@
+package views.scenes;
 
 public abstract class Scene extends JPanel {
  private JLayeredPane pane = new JLayeredPane();

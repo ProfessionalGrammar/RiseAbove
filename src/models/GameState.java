@@ -53,4 +53,8 @@ public class GameState {
     public static void answer(boolean ans){
         isCorrectAns = ans;   
     }
+    
+    public static void setScene(int lvl, int scene){
+    
+    }
 }

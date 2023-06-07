@@ -54,7 +54,7 @@ public class GameState {
         isCorrectAns = ans;   
     }
     
-    public static void setScene(int lvl, int scene){
+    public static void setLevel(String){
     
     }
 }

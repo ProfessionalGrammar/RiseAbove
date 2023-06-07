@@ -4,7 +4,6 @@ import java.awt.*;
 
 public class UI extends JFrame{
   private static GameManager gm;
-  private static JPanel curScene;
   
   public UI(GameManager g){
     gm = g;
@@ -18,5 +17,10 @@ public class UI extends JFrame{
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setResizable(false);
     this.setLayout(null);
+  }
+  
+  public static void display(Scene scene){
+    scene.display();
+    frame.remove(scene);
   }
 }

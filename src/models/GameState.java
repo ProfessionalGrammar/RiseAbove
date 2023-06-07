@@ -6,6 +6,7 @@ public class GameState {
     private static boolean is2D;
     private static boolean isPointClick;
     private static boolean isCorrectAns;
+    private static Level curLevel;
         
     public GameState() {
         score = 0;
@@ -53,8 +54,12 @@ public class GameState {
     public static void answer(boolean ans){
         isCorrectAns = ans;   
     }
+   
+    public static Level getLevel(){
+        return curLevel;
+    }
     
-    public static void setLevel(String){
-    
+    public static void setLevel(Level level){
+        curLevel = level;
     }
 }

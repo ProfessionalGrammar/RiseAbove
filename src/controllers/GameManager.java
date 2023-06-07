@@ -2,7 +2,7 @@ package controllers;
 public class GameManager {
   private GameState gameState;
   private UI window;
-  private Level[] = new Level[3];
+  private Level[] = new Level[4];
     
   public GameManager(){
     gameState = new GameState();
@@ -31,10 +31,12 @@ public class GameManager {
 
     private void initializeGame() {
         // Initialize game state, load assets, set up initial game objects, etc.
-      level1 = new Level1();
-      level2 = new Level2();
+      Level[0] = new Level();
+      Level[1] = new Level1();
+      Level[2] = new Level1();
+      Level[3] = new Level1();
       
-      gameState.setLevel(Level);
+      gameState.setLevel(Level[0]);
     }
 
     private void processInput() {

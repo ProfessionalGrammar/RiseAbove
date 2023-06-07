@@ -28,10 +28,9 @@ public class GameManager {
         endGame();
     }
 
-    /* We might want to create all this code as separate classes instead of methods*/
     private void initializeGame() {
         // Initialize game state, load assets, set up initial game objects, etc.
-        gameState.setLevel(1);
+        gameState.setScene("SplashScreen");
     }
 
     private void processInput() {
@@ -48,6 +47,7 @@ public class GameManager {
 
     private void render() {
         // Render the game view based on the current game state
+        UI.display();
     }
 
     private void endGame() {

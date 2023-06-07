@@ -2,7 +2,8 @@ package controllers;
 public class GameManager {
   private GameState gameState;
   private UI window;
-  
+  private Level[] = new Level[3];
+    
   public GameManager(){
     gameState = new GameState();
     window = new UI (this);
@@ -30,7 +31,10 @@ public class GameManager {
 
     private void initializeGame() {
         // Initialize game state, load assets, set up initial game objects, etc.
-        gameState.setScene("SplashScreen");
+      level1 = new Level1();
+      level2 = new Level2();
+      
+      gameState.setLevel(Level);
     }
 
     private void processInput() {
@@ -42,7 +46,8 @@ public class GameManager {
     private void updateGameState() {
         // Update game state based on user input, game logic, etc.
         // Manage level and scene progression based on game state and user actions
-        // Determine outcomes based on user actions and update game state accordingly    
+        // Determine outcomes based on user actions and update game state accordingly
+      
     }
 
     private void render() {

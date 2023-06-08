@@ -1,3 +1,5 @@
+package views.scenes;
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -6,5 +8,9 @@ import javax.swing.*;
 public class MainMenu extends Scene{
    public MainMenu () {
       
+   }
+   
+   public void display(){
+   
    }
 }

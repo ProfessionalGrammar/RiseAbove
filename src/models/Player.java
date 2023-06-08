@@ -1,3 +1,4 @@
+package models;
 
 public Player extends GameObject {
   private int speed;

@@ -1,16 +1,21 @@
+package models;
+import controllers.*;
 
 public class GameState {
     private static int score;
     private static boolean isGameOver;
+    private static boolean isLevelOver;
     private static boolean is2D;
     private static boolean isPointClick;
     private static boolean isCorrectAns;
+    private static Level curLevel;
         
     public GameState() {
         score = 0;
         isGameOver = false;
         is2D = false;
         isCorrectAns = false;
+        isLevelOver = false;
     }
 
     public static int getScore() {
@@ -29,12 +34,21 @@ public class GameState {
         isGameOver = gameOver;
     }
     
+    
+    public static boolean isLevelOver() {
+        return isLevelOver;
+    }
+
+    public static void setLevelOver(boolean levelOver) {
+        isLevelOver = levelOver;
+    }
+    
     public static boolean is2D() {
         return is2D;
     }
     
-    public static void set2D(boolean 2D) {
-        is2D = 2D;
+    public static void set2D(boolean is2d) {
+        is2D = is2d;
     }
     
     public static boolean isPointClick() {
@@ -51,5 +65,13 @@ public class GameState {
     
     public static void answer(boolean ans){
         isCorrectAns = ans;   
+    }
+   
+    public static Level getLevel(){
+        return curLevel;
+    }
+    
+    public static void setLevel(Level level){
+        curLevel = level;
     }
 }

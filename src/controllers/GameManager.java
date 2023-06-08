@@ -1,11 +1,17 @@
 package controllers;
+import models.*;
+import views.*;
+import views.scenes.SplashScreen;
+
+
 public class GameManager {
   private GameState gameState;
   private UI window;
-  
+  private Level[] levels = new Level[4];
+    
   public GameManager(){
     gameState = new GameState();
-    window = new UI (this);
+    window = new UI ();
   }
   
   public void startGame() {
@@ -28,10 +34,14 @@ public class GameManager {
         endGame();
     }
 
-    /* We might want to create all this code as separate classes instead of methods*/
     private void initializeGame() {
         // Initialize game state, load assets, set up initial game objects, etc.
-        gameState.setLevel(1);
+      levels[0] = new Level();
+      levels[1] = new Level1();
+      levels[2] = new Level2();
+      levels[3] = new Level3();
+      
+      gameState.setLevel(levels[0]);
     }
 
     private void processInput() {
@@ -43,11 +53,14 @@ public class GameManager {
     private void updateGameState() {
         // Update game state based on user input, game logic, etc.
         // Manage level and scene progression based on game state and user actions
-        // Determine outcomes based on user actions and update game state accordingly    
+        // Determine outcomes based on user actions and update game state accordingly
+      
     }
 
     private void render() {
         // Render the game view based on the current game state
+        SplashScreen splash = new SplashScreen(window);
+        window.display(splash);
     }
 
     private void endGame() {

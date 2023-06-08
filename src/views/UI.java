@@ -1,22 +1,27 @@
 package views;
+
+import views.scenes.*;
 import javax.swing.*;
 import java.awt.*;
 
-public class UI extends JFrame{
-  private static GameManager gm;
-  private static JPanel curScene;
-  
-  public UI(GameManager g){
-    gm = g;
+public class UI extends JFrame {
+
+  public UI() {
     createWindow();
     this.setVisible(true);
   }
-  
-  public static void createWindow (){
-    this = new JFrame ("Rise Above");
+
+  public void createWindow() {
+    this.setTitle("Rise Above");
     this.setSize(1400, 800);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setResizable(false);
     this.setLayout(null);
+  }
+
+  public void display(Scene scene) {
+    this.add(scene);
+    scene.display();
+    this.remove(scene);
   }
 }

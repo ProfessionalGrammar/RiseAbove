@@ -1,3 +1,7 @@
+package controllers;
+import models.*;
+import views.*;
+
 public class Level {
   private GameState gameState;
   private GameManager gm;
@@ -5,7 +9,7 @@ public class Level {
   
   public Level (){
     gameState = new GameState();
-    window = new UI (this);
+    window = new UI ();
   }
   
   public void startLevel() {
@@ -31,7 +35,6 @@ public class Level {
     /* We might want to create all this code as separate classes instead of methods*/
     private void initializeLevel() {
         // Initialize game state, load assets, set up initial game objects, etc.
-      gameState.setScene(1);
     }
 
     private void processInput() {
@@ -40,11 +43,10 @@ public class Level {
         // Handle interactive events and outcomes
     }
 
-    private void updateGameState(GameState g) {
+    private void updateGameState() {
         // Update game state based on user input, game logic, etc.
         // Manage level and scene progression based on game state and user actions
         // Determine outcomes based on user actions and update game state accordingly    
-        gameState = g;
     }
 
     private void render() {

@@ -1,3 +1,10 @@
+package views.scenes;
+
+import javax.swing.*;
+import utilities.*; 
+import utilities.Minigame.*; 
+
+
 
 public abstract class Scene extends JPanel {
  private JLayeredPane pane = new JLayeredPane();
@@ -8,19 +15,22 @@ public abstract class Scene extends JPanel {
  }
  
  public void addBackground(JPanel panel){
-   pane.add(panel, new Integer(0));
+   pane.add(panel, Integer.valueOf(0));
  }
  
  public void addTextBox(TextBox box){
   dialogue = box;  
-  pane.add(box, new Integer(1));
+  pane.add(box, Integer.valueOf(1));
  }
  
  public void addButton(Button button){
-   pane.add(button, new Integer(2));
+   pane.add(button, Integer.valueOf(2));
  }
  
  public void addMinigame(Minigame minigame){
-   pane.add(minigame, new Integer(3));
+   pane.add(minigame, Integer.valueOf(3));
  }
+ 
+ public abstract void display();
+ 
 }

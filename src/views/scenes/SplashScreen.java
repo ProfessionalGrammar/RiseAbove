@@ -5,7 +5,9 @@ Description: Submission of semi-functional splash screen animation.
 
 */
 
-   
+package views.scenes;
+
+import views.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -31,7 +33,7 @@ public class SplashScreen extends Scene{
                  
                   splashScreenExit = true;
                   ui.remove(this); // Remove the panel
-               
+`               
                }
             }
          });      

@@ -1,3 +1,5 @@
+package models;
+import utilities.*;
 
 public class GameObject {
  private int x;

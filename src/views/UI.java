@@ -22,7 +22,6 @@ public class UI extends JFrame {
   public void display(Scene scene) {
         this.getContentPane().removeAll();  // Remove all previous components
         this.getContentPane().add(scene);
-        scene.display();
         this.revalidate();  // Revalidate the frame to reflect the changes
         this.repaint();  // Repaint the frame
   }

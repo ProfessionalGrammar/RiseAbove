@@ -32,9 +32,8 @@ public class SplashScreen {
             
                if (splashFinished ){ 
                  
+                  new MainMenu();
                   frame.dispose(); // Close the JFrame
-                  //new MainMenu();
-                  
                
                }
             }

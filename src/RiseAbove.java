@@ -7,5 +7,6 @@ import java.util.*;
 public class RiseAbove {   
    public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new SplashScreen());
+        
    }
 }

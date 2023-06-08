@@ -10,11 +10,9 @@ package views.scenes;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import java.util.Scanner;
 
 public class SplashScreen {
 
-   public static boolean splashScreenExit = false;
    private static boolean splashFinished  = false;
 
 
@@ -34,8 +32,9 @@ public class SplashScreen {
             
                if (splashFinished ){ 
                  
-                  splashScreenExit = true;
                   frame.dispose(); // Close the JFrame
+                  //new MainMenu();
+                  
                
                }
             }
@@ -341,9 +340,7 @@ public class SplashScreen {
             g2d.setStroke(thickerStroke);
             g.drawRect(888,656, 414, 64);
             g2d.setStroke(oldStroke);
-            
-                        
-            
+                     
          }
       }
    }

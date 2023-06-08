@@ -35,13 +35,13 @@ public class GameManager {
     }
 
     private void initializeGame() {
-        // Initialize game state, load assets, set up initial game objects, etc.
-      levels[0] = new Level();
-      levels[1] = new Level1();
-      levels[2] = new Level2();
-      levels[3] = new Level3();
+      // Initialize game state, load assets, set up initial game objects, etc.
+      //levels[0] = new Level();
+      //levels[1] = new Level1();
+      //levels[2] = new Level2();
+      //levels[3] = new Level3();
       
-      gameState.setLevel(levels[0]);
+      //gameState.setLevel(levels[0]);
     }
 
     private void processInput() {
@@ -59,7 +59,7 @@ public class GameManager {
 
     private void render() {
         // Render the game view based on the current game state
-        SplashScreen splash = new SplashScreen(window);
+        SplashScreen splash = new SplashScreen();
         window.display(splash);
     }
 

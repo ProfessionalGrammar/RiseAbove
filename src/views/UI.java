@@ -22,6 +22,5 @@ public class UI extends JFrame {
   public void display(Scene scene) {
     this.add(scene);
     scene.display();
-    this.remove(scene);
   }
 }

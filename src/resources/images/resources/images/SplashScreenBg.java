@@ -5,14 +5,14 @@ Description: Submission of semi-functional splash screen animation.
 
 */
 
-package views.scenes;
+package resources.images.*;
 
 import views.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class SplashScreen extends Scene{
+public class SplashScreenBg extends JPanel{
 
    public static boolean splashScreenExit = false;
    private static boolean splashFinished  = false;

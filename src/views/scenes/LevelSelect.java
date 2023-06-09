@@ -10,8 +10,7 @@ public class LevelSelect extends Scene {
 
    public void display (InputHandler handler) {
       DrawingOfMenu draw2 = new DrawingOfMenu();
-      
-      JFrame frame = new JFrame("Rise Above Mental Health Simulator: Level Select");
+      frame = new JFrame("Rise Above Mental Health Simulator: Level Select");
       frame.setSize(1400, 800);
       JLayeredPane layeredPane = new JLayeredPane();
       draw2.setBounds(0, 0, 1400, 800);      

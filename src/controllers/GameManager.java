@@ -30,7 +30,10 @@ public class GameManager {
   
   public void changeScene(Scene newScene){
       scene.endScene();
+      System.out.println("end Scene");
       newScene.display(handler);
+      System.out.println(" new scene");
+      scene = newScene;
   }
 
   private void processInput() {

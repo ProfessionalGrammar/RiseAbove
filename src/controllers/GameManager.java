@@ -2,16 +2,20 @@ package controllers;
 import models.*;
 import views.*;
 import views.scenes.*;
+import views.scenes.lv1.*;
+import utilities.*;
 
 import javax.swing.*;
 import java.util.*;
 
 public class GameManager {
   private GameState gameState;
+  private InputHandler handler;
   //private Level[] levels = new Level[4];
     
   public GameManager(){
     gameState = new GameState();
+    handler = new InputHandler(gameState);
   }
   
   public void startGame() {
@@ -35,7 +39,7 @@ public class GameManager {
     }
 
     private void initializeGame() {
-      new MainMenu();
+      new MainMenu(handler);
       //SwingUtilities.invokeLater(() -> new SplashScreen());
       
       //levels[0] = new Level();

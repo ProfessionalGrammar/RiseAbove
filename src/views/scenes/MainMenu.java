@@ -1,35 +1,48 @@
 package views.scenes;
 
-
+import utilities.*;
 import java.awt.*;
 import javax.swing.*;
+import java.awt.Graphics;
+import javax.swing.JComponent;
 
 public class MainMenu {
 
-   DrawingOfMenu draw2 = new DrawingOfMenu();
-
-   public MainMenu () {
-   
-      JFrame frame = new JFrame ("Rise Above Mental Health Simulator: Menu");
+   public MainMenu (InputHandler handler) {
+      DrawingOfMenu draw2 = new DrawingOfMenu();
+      JFrame frame = new JFrame("Rise Above Mental Health Simulator: Menu");
       frame.setSize(1400, 800);
-      frame.add(draw2);
       
-      Button Play = new Button(490, 500, 100, 100, "Play");
-      Button Instructions = new Button(); 
-      Button Highscore = new Button(); 
-      Button Credits = new Button(); 
-      Button Exit = new Button();
- 
-      frame.setVisible(true);     
+      JLayeredPane layeredPane = new JLayeredPane();
+      layeredPane.setPreferredSize(new Dimension(1400, 800));
+      layeredPane.add(draw2, Integer.valueOf(-1));
       
-      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+      JPanel buttonPanel = new JPanel(); // JPanel to hold buttons
+      GameButton playButton = new GameButton("Play", 490, 500, 100, 100, handler);
+      GameButton instructionsButton = new GameButton("Instructions", 490, 550, 100, 100, handler);
+      GameButton highscoreButton = new GameButton("Highscore", 490, 600, 100, 100, handler);
+      GameButton creditsButton = new GameButton("Credits", 490, 650, 100, 100, handler);
+      GameButton exitButton = new GameButton("Exit", 490, 700, 100, 100, handler);
+
+      buttonPanel.add(playButton);
+      buttonPanel.add(instructionsButton);
+      buttonPanel.add(highscoreButton);
+      buttonPanel.add(creditsButton);
+      buttonPanel.add(exitButton);
+      
+      //layeredPane.add(buttonPanel, Integer.valueOf(1));
+
+      frame.add(layeredPane);
+      frame.setLayout(null);
+      frame.setVisible(true);
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    }
-   
-   public class DrawingOfMenu extends JComponent {
+      
+   public static class DrawingOfMenu extends JComponent {
    
    
       public void paint (Graphics g){
-      
+         
          Color green1 = new Color (149, 176, 157);
          Color green2 = new Color (102, 156, 106);
          Color green3 =  new Color (119, 169, 120);
@@ -150,8 +163,8 @@ public class MainMenu {
          Color brown1 = new Color(56, 41, 18);
          int[] rockX = {0, 57, 73, 37,       95, 107, 105, 69, 153,   197, 223, 267,299,  295, 325, 353, 531, 623, 651, 663, 767, 861, 889, 969, 1009, 1057, 1105,  1123, 1167,1221,1239, 1271,1287,1275,1291,1317, 1323,1317,1377,1400, 1400, 0};          
          int[] rockY = {541, 521, 551, 591, 623, 637, 659, 727, 769,  707, 675, 681, 699, 719, 775, 787, 739, 741, 771, 783, 765,  735, 701, 701, 593, 603,  608,   629, 717, 779, 759, 727,    737, 597, 569, 581, 533, 501, 493, 511,   800, 800};
-        g.setColor(brown1);
-        g.fillPolygon(rockX, rockY, rockX.length);
+         g.setColor(brown1);
+         g.fillPolygon(rockX, rockY, rockX.length);
          
          // sky leftmost sun's rays' highlights
          
@@ -174,6 +187,7 @@ public class MainMenu {
          Font newFont = new Font("Arial", Font.PLAIN, 42);
          g.setFont(newFont);
          g.drawString("Main Menu", 500, 180);
+
       }
    }
 }

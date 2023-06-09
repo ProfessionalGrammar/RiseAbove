@@ -5,12 +5,10 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class InputHandler implements KeyListener, ActionListener {
-  private GameObject[] objects;
   private GameState state;
   public boolean upPressed, downPressed, leftPressed, rightPressed, interact;
 
-  public InputHandler(GameObject[] curObj, GameState curState) {
-    objects = curObj;
+  public InputHandler(GameState curState) {
     state = curState;
   }
 

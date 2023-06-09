@@ -10,5 +10,4 @@ public class RiseAbove {
         gm.startGame();
         
    }
-   
 }

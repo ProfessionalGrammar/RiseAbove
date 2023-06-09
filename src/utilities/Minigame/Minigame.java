@@ -6,16 +6,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+package utilities.
 
 public class Minigame extends JPanel {
     private JPanel panel;
     private JLabel questionLabel;
-    private JButton[] optionButtons;
+    private GameButton[] optionButtons;
     private String[] options;
-    private boolean[] isCorrect;
-    private GameState state;
 
-    public Minigame(String question, JButton[] buttons, String[] opts, boolean[] corr, GameState gameState) {
+    public Minigame(String question, GameButton[] buttons) {
         panel = new JPanel();
         questionLabel = new JLabel(question);
         panel.add(questionLabel);
@@ -25,7 +24,7 @@ public class Minigame extends JPanel {
         state = gameState;
 
         for (int i = 0; i < optionButtons.length; i++) {
-            optionButtons[i] = new JButton(options[i]);
+            optionButtons[i] = new GameButton(options[i]);
             panel.add(optionButtons[i]);
             if (!isCorrect[i]) {
                 optionButtons[i].addActionListener(new ActionListener() {
@@ -52,7 +51,7 @@ public class Minigame extends JPanel {
             public void run() {
                 JFrame frame = new JFrame("MiniGame");
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                frame.getContentPane().add(panel);
+                frame.add(panel);
                 frame.pack();
                 frame.setVisible(true);
             }

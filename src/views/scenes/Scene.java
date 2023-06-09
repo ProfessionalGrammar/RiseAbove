@@ -4,8 +4,10 @@ import utilities.*;
 import javax.swing.*;
 
 public abstract class Scene {
-   JFrame frame;
-   
+   public JFrame frame;
+   public String[] dialogue;
+   public TextBox dialogueBox;
+   public int dialogueCounter;
    
    public abstract void display(InputHandler handler);
    
@@ -14,7 +16,7 @@ public abstract class Scene {
    }
    
    public void setText(){
-   
+      dialogueCounter++;
    }
    
 }

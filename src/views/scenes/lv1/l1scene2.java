@@ -7,10 +7,6 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
-
 public class l1scene2 extends Scene {
 
    JFrame frame;
@@ -20,15 +16,16 @@ public class l1scene2 extends Scene {
    
       frame = new JFrame ("Rise Above Mental Health Simulator: Therapist Session no. 1");
       frame.setSize(1400,800);
+      
+      dialogue = new String[] {"How have you been doing?", "Good to hear that.", "I love pizza.", "That's a good idea!"};
+      dialogueBox = new TextBox(dialogue[0], 50, 600, 1300, 200);
+      dialogueCounter++;
+      
       JLayeredPane layeredPane = new JLayeredPane();
       draw.setBounds(0, 0, 1400, 800);  
       layeredPane.add(draw, Integer.valueOf(-1));
       
-      
-      
-
-         TextBox dialogue = new TextBox("Hello, World!", 50, 600, 1300, 200);
-         layeredPane.add(dialogue, Integer.valueOf(1));
+      layeredPane.add(dialogueBox, Integer.valueOf(1));
         
         JPanel buttonPanel = new JPanel(); // JPanel to hold buttons
         buttonPanel.setOpaque(false);
@@ -42,8 +39,6 @@ public class l1scene2 extends Scene {
         frame.setVisible(true);
         frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
-      
      
    }
    

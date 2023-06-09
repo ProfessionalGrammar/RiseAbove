@@ -86,6 +86,12 @@ public class InputHandler implements KeyListener, ActionListener {
          case "Level2": state.setLevel(2); 
          case "Level3": state.setLevel(3); 
          }
+      } 
+      
+      if(state.getLevel() == 1){
+         switch(cmd){
+         case "NextDialogue": ; break;
       }
-  }
+   }
+   }
 }

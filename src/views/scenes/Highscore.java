@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.Graphics;
 import javax.swing.JComponent;
 
-public class LevelSelect extends Scene {
+public class Highscore extends Scene {
 
    public void display (InputHandler handler) {
       DrawingOfMenu draw2 = new DrawingOfMenu();
@@ -18,18 +18,9 @@ public class LevelSelect extends Scene {
       
       JPanel buttonPanel = new JPanel(); // JPanel to hold buttons
       buttonPanel.setOpaque(false);
-      GameButton level1 = new GameButton("Level1", "Level1", 490, 500, 100, 100, handler);
-      level1.setOpaque(true);
-      GameButton level2 = new GameButton("Level2", "Level2", 490, 550, 100, 100, handler);
-      level2.setOpaque(true);
-      GameButton level3 = new GameButton("Level3", "Level3",490, 600, 100, 100, handler);
-      level3.setOpaque(true);
       GameButton back = new GameButton("Back", "Back", 490, 650, 100, 100, handler);
       back.setOpaque(true);
 
-      buttonPanel.add(level1);
-      buttonPanel.add(level2);
-      buttonPanel.add(level3);
       buttonPanel.add(back);
       buttonPanel.setBounds(550, 300, 100, 200);
       layeredPane.add(buttonPanel, Integer.valueOf(1));

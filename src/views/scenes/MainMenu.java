@@ -17,18 +17,23 @@ public class MainMenu extends Scene {
       layeredPane.add(draw2, Integer.valueOf(-1));
       
       JPanel buttonPanel = new JPanel(); // JPanel to hold buttons
-      GameButton playButton = new GameButton("Play", 490, 500, 100, 100, handler);
-      GameButton instructionsButton = new GameButton("Instructions", 490, 550, 100, 100, handler);
-      GameButton highscoreButton = new GameButton("Highscore", 490, 600, 100, 100, handler);
-      GameButton creditsButton = new GameButton("Credits", 490, 650, 100, 100, handler);
-      GameButton exitButton = new GameButton("Exit", 490, 700, 100, 100, handler);
+      buttonPanel.setOpaque(false);
+      GameButton playButton = new GameButton("Play", "Play", 490, 500, 100, 100, handler);
+      playButton.setOpaque(true);
+      GameButton instructionsButton = new GameButton("Instructions", "Instructions", 490, 550, 100, 100, handler);
+      instructionsButton.setOpaque(true);
+      GameButton highscoreButton = new GameButton("Highscore", "Highscore",490, 600, 100, 100, handler);
+      highscoreButton.setOpaque(true);
+      GameButton creditsButton = new GameButton("Credits", "Credits", 490, 650, 100, 100, handler);
+      creditsButton.setOpaque(true);
+      GameButton exitButton = new GameButton("Exit", "Exit",490, 700, 100, 100, handler);
+      exitButton.setOpaque(true);
 
       buttonPanel.add(playButton);
       buttonPanel.add(instructionsButton);
       buttonPanel.add(highscoreButton);
       buttonPanel.add(creditsButton);
       buttonPanel.add(exitButton);
-      buttonPanel.setOpaque(false);
       buttonPanel.setBounds(550, 300, 100, 200);
       layeredPane.add(buttonPanel, Integer.valueOf(1));
       

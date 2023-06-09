@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.Graphics;
 import javax.swing.JComponent;
 
-public class LevelSelect extends Scene {
+public class Instructions extends Scene {
 
    public void display (InputHandler handler) {
       DrawingOfMenu draw2 = new DrawingOfMenu();
@@ -18,18 +18,8 @@ public class LevelSelect extends Scene {
       
       JPanel buttonPanel = new JPanel(); // JPanel to hold buttons
       buttonPanel.setOpaque(false);
-      GameButton level1 = new GameButton("Level1", "Level1", 490, 500, 100, 100, handler);
-      level1.setOpaque(true);
-      GameButton level2 = new GameButton("Level2", "Level2", 490, 550, 100, 100, handler);
-      level2.setOpaque(true);
-      GameButton level3 = new GameButton("Level3", "Level3",490, 600, 100, 100, handler);
-      level3.setOpaque(true);
       GameButton back = new GameButton("Back", "Back", 490, 650, 100, 100, handler);
       back.setOpaque(true);
-
-      buttonPanel.add(level1);
-      buttonPanel.add(level2);
-      buttonPanel.add(level3);
       buttonPanel.add(back);
       buttonPanel.setBounds(550, 300, 100, 200);
       layeredPane.add(buttonPanel, Integer.valueOf(1));
@@ -189,7 +179,9 @@ public class LevelSelect extends Scene {
          Font newFont = new Font("Arial", Font.PLAIN, 42);
          g.setFont(newFont);
          g.drawString("Main Menu", 500, 180);
-
+         Font small = new Font("Arial", Font.PLAIN, 24);
+         g.setFont(small);
+         g.drawString("Hello, welcome to Rise Above, an interactive game exploring the applications of cognitive behavioural therapy on depression.", 500, 400);
       }
    }
 }

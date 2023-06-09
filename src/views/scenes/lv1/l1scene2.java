@@ -1,7 +1,11 @@
+package views.scenes.lv1;
+
+import utilities.*;
 import java.awt.*;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class l1scene2 {
 
@@ -16,26 +20,28 @@ public class l1scene2 {
       JLayeredPane layeredPane = new JLayeredPane();
       draw.setBounds(0, 0, 1400, 800);  
       layeredPane.add(draw, Integer.valueOf(-1));
-      
-    
       frame.add(layeredPane);
+      
+      
 
-
-        JLabel label = new JLabel("Hello, World!");
-        label.setBounds(50, 600, 1300, 200);
+        JLabel label = new JLabel("<html><body style='width: 900px'>Hello, World!</body></html>");
+        label.setBounds(60, 600, 1100, 200);
         label.setBackground(new Color(0, 0, 0, 128)); // Set translucent background
         label.setForeground(Color.BLACK);
-
-    
-    
+            
         label.setFont(new Font("Book Antiqua", Font.PLAIN, 25));
-
-
+        label.setHorizontalAlignment(SwingConstants.LEFT);
         layeredPane.add(label, Integer.valueOf(1));
-
         
+        
+        JPanel buttonPanel = new JPanel(); // JPanel to hold buttons
+        GameButton playButton = new GameButton("Next", 490, 500, 100, 100, handler);
+        buttonPanel.add(playButton);
+        frame.add(buttonPanel, Integer.valueOf(2));
+
         frame.add(layeredPane);
         frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
       
      
@@ -277,4 +283,3 @@ public class l1scene2 {
 
 
 }
-

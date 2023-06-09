@@ -3,18 +3,18 @@ import controllers.*;
 
 public class GameState {
     private static int score;
+    private static int level;
     private static boolean isGameOver;
-    private static boolean isLevelOver;
     private static boolean is2D;
     private static boolean isPointClick;
     private static boolean isCorrectAns;
         
     public GameState() {
         score = 0;
+        level = 0;
         isGameOver = false;
         is2D = false;
         isCorrectAns = false;
-        isLevelOver = false;
     }
 
     public static int getScore() {
@@ -31,15 +31,6 @@ public class GameState {
 
     public static void setGameOver(boolean gameOver) {
         isGameOver = gameOver;
-    }
-    
-    
-    public static boolean isLevelOver() {
-        return isLevelOver;
-    }
-
-    public static void setLevelOver(boolean levelOver) {
-        isLevelOver = levelOver;
     }
     
     public static boolean is2D() {
@@ -64,5 +55,13 @@ public class GameState {
     
     public static void answer(boolean ans){
         isCorrectAns = ans;   
+    }
+    
+    public static int getLevel(){
+      return level;
+    }
+    
+    public static void setLevel(int lvl){
+      level = lvl;
     }
 }

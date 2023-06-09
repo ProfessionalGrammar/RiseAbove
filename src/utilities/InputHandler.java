@@ -73,13 +73,16 @@ public class InputHandler implements KeyListener, ActionListener {
   
   public void actionPerformed(ActionEvent e){
       String cmd = e.getActionCommand();
-      switch(cmd){
-      case "Exit": state.setGameOver(true); break;
-      case "Play":System.out.println("taking input");
-gm.changeScene(new LevelSelect()); break;
-      case "Instructions": state.setGameOver(true); break;
-      case "Highscore": state.setGameOver(true); break;
-      case "Credits": state.setGameOver(true); break;
+      
+      if(state.getLevel() == 0){
+         switch(cmd){
+         case "Exit": state.setGameOver(true); break;
+         case "Play": gm.changeScene(new LevelSelect()); break;
+         case "Instructions": gm.changeScene(new Instructions()); break;
+         case "Highscore": gm.changeScene(new Highscore()); break;
+         case "Credits": gm.changeScene(new Credits()); break;
+         case "Back": gm.changeScene(new MainMenu()); break;
+         }
       }
   }
 }

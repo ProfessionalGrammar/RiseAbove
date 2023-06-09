@@ -19,10 +19,10 @@ public class UI extends JFrame {
     this.setLayout(null);
   }
 
-  public void display(Scene scene) {
+/*  public void display(Scene scene) {
         this.getContentPane().removeAll();  // Remove all previous components
         this.getContentPane().add(scene);
         this.revalidate();  // Revalidate the frame to reflect the changes
         this.repaint();  // Repaint the frame
-  }
+  }*/
 }

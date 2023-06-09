@@ -82,6 +82,9 @@ public class InputHandler implements KeyListener, ActionListener {
          case "Highscore": gm.changeScene(new Highscore()); break;
          case "Credits": gm.changeScene(new Credits()); break;
          case "Back": gm.changeScene(new MainMenu()); break;
+         case "Level1":state.setLevel(1); 
+         case "Level2":state.setLevel(2); 
+         case "Level3":state.setLevel(3); 
          }
       }
   }

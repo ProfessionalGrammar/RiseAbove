@@ -33,6 +33,10 @@ public class GameManager {
       newScene.display(handler);
       scene = newScene;
   }
+  
+  public void setText(){
+   scene.setText();
+  }
 
   private void processInput() {
         // Handle user input events such as mouse clicks, key presses, etc.

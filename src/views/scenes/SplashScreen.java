@@ -31,10 +31,8 @@ public class SplashScreen {
             public void keyPressed(KeyEvent e) {
             
                if (splashFinished ){ 
-                 
-                  new MainMenu();
                   frame.dispose(); // Close the JFrame
-               
+                  
                }
             }
          });

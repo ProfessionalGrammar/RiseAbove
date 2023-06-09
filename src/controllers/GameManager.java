@@ -23,7 +23,15 @@ public class GameManager {
       Thread loop = new Thread(lp);
       loop.start();
       
-      SwingUtilities.invokeLater(() -> new SplashScreen());
+      try {
+            SwingUtilities.invokeLater(() -> new SplashScreen());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+      
+      
+      scene = new MainMenu();
+      scene.display(handler);
   }
   
   public void changeScene(Scene newScene){

@@ -1,4 +1,6 @@
 package views.scenes.lv2;
+
+import utilities.*;
 import views.scenes.*;
 import views.scenes.*;
 import java.awt.*;

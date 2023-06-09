@@ -31,8 +31,8 @@ public class SplashScreen {
             public void keyPressed(KeyEvent e) {
             
                if (splashFinished ){ 
-                  frame.dispose(); // Close the JFrame
                   
+                  frame.dispose(); // Close the JFrame
                }
             }
          });

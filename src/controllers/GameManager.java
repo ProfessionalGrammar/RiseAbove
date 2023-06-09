@@ -1,6 +1,7 @@
 package controllers;
 import models.*;
 import views.*;
+import java.lang.reflect.InvocationTargetException;
 import views.scenes.*;
 import views.scenes.lv1.*;
 import utilities.*;
@@ -18,21 +19,20 @@ public class GameManager {
     handler = new InputHandler(gameState, this);
   }
   
-  public void startGame() {
-      GameLoop lp = new GameLoop();
-      Thread loop = new Thread(lp);
-      loop.start();
-      
-      try {
-            SwingUtilities.invokeLater(() -> new SplashScreen());
-        } catch (InterruptedException e) {
+   public void startGame() {
+        GameLoop lp = new GameLoop();
+        Thread loop = new Thread(lp);
+        loop.start();
+
+        try {
+            SwingUtilities.invokeAndWait(() -> new SplashScreen());
+        } catch (InterruptedException | InvocationTargetException e) {
             e.printStackTrace();
         }
-      
-      
-      scene = new MainMenu();
-      scene.display(handler);
-  }
+
+        scene = new MainMenu();
+        scene.display(handler);
+    }
   
   public void changeScene(Scene newScene){
       scene.endScene();

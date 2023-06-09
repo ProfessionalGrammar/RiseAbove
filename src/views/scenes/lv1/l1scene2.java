@@ -20,7 +20,7 @@ public class l1scene1 {
       frame.setSize(1400,800);
       JLayeredPane layeredPane = new JLayeredPane();
       draw.setBounds(0, 0, 1400, 800);  
-      layeredPane.add(draw, Integer.valueOf(-1));
+      layeredPane.add(draw, Integer.valueOf(-1)); 
       
       
       frame.add(layeredPane);

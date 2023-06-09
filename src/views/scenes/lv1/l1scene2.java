@@ -17,7 +17,7 @@ public class l1scene2 extends Scene {
       frame = new JFrame ("Rise Above Mental Health Simulator: Therapist Session no. 1");
       frame.setSize(1400,800);
       
-      dialogue = new String[] {"How have you been doing?", "Good to hear that.", "I love pizza.", "That's a good idea!"};
+      dialogue = new String[] {"How have you been doing?", "Good to hear that.", "I love pizza.", "That's a good idea!", "Trying to get better!"};
       dialogueBox = new TextBox(dialogue[0], 50, 600, 1300, 200);
       dialogueCounter++;
       

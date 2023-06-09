@@ -35,7 +35,6 @@ public class GameManager {
   }
   
   public void nextText(){
-   System.out.println("managing next");
    scene.nextText();
   }
 

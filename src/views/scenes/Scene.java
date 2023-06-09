@@ -17,7 +17,6 @@ public abstract class Scene {
    
    public void nextText(){
       if(dialogueCounter < dialogue.length){
-         System.out.println("doing next");
          dialogueBox.setText(dialogue[dialogueCounter]);
          dialogueCounter++;
       }

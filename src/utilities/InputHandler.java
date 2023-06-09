@@ -3,6 +3,7 @@ package utilities;
 import controllers.*;
 import models.*;
 import views.scenes.*;
+import views.scenes.lv1.*;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -82,7 +83,7 @@ public class InputHandler implements KeyListener, ActionListener {
          case "Highscore": gm.changeScene(new Highscore()); break;
          case "Credits": gm.changeScene(new Credits()); break;
          case "Back": gm.changeScene(new MainMenu()); break;
-         case "Level1": state.setLevel(1); 
+         case "Level1": state.setLevel(1); gm.changeScene(new l1scene1()); 
          case "Level2": state.setLevel(2); 
          case "Level3": state.setLevel(3); 
          case "NextDialogue": gm.nextText(); break;

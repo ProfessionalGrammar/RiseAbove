@@ -1,5 +1,7 @@
 package views.scenes.lv1;
 
+import views.scenes.*;
+import utilities.*;
 import java.awt.*;
 import javax.swing.*;
 import java.util.ArrayList;
@@ -9,12 +11,12 @@ import java.util.List;
 
 
 
-public class l1scene1 {
+public class l1scene1 extends Scene {
 
    JFrame frame;
    DrawingCar draw = new DrawingCar();
 
-   public void display () {
+   public void display (InputHandler handler) {
    
       frame = new JFrame ("Rise Above Mental Health Simulator: Intro Scene");
       frame.setSize(1400,800);

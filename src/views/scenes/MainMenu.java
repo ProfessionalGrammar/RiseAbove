@@ -10,11 +10,11 @@ public class MainMenu {
 
    public MainMenu (InputHandler handler) {
       DrawingOfMenu draw2 = new DrawingOfMenu();
+      
       JFrame frame = new JFrame("Rise Above Mental Health Simulator: Menu");
       frame.setSize(1400, 800);
-      
       JLayeredPane layeredPane = new JLayeredPane();
-      layeredPane.setPreferredSize(new Dimension(1400, 800));
+      draw2.setBounds(0, 0, 1400, 800);      
       layeredPane.add(draw2, Integer.valueOf(-1));
       
       JPanel buttonPanel = new JPanel(); // JPanel to hold buttons
@@ -29,12 +29,13 @@ public class MainMenu {
       buttonPanel.add(highscoreButton);
       buttonPanel.add(creditsButton);
       buttonPanel.add(exitButton);
+      buttonPanel.setOpaque(false);
+      buttonPanel.setBounds(550, 300, 100, 200);
+      layeredPane.add(buttonPanel, Integer.valueOf(1));
       
-      //layeredPane.add(buttonPanel, Integer.valueOf(1));
-
       frame.add(layeredPane);
-      frame.setLayout(null);
       frame.setVisible(true);
+      frame.setLayout(null);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    }
       
@@ -42,7 +43,7 @@ public class MainMenu {
    
    
       public void paint (Graphics g){
-         
+         super.paint(g);
          Color green1 = new Color (149, 176, 157);
          Color green2 = new Color (102, 156, 106);
          Color green3 =  new Color (119, 169, 120);

@@ -68,6 +68,10 @@ public class InputHandler implements KeyListener, ActionListener {
   }
   
   public void actionPerformed(ActionEvent e){
-   //does something
+      String cmd = e.getActionCommand();
+      
+      switch(cmd){
+      case "Exit": state.setGameOver(true); break;
+      }
   }
 }

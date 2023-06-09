@@ -21,24 +21,16 @@ public class GameManager {
   public void startGame() {
         // Perform initialization tasks
         initializeGame();
-
-        // Start the game loop
-        while (!gameState.isGameOver()) {
-            // Process user input
-            processInput();
-
-            // Update game state
-            updateGameState();
-
-            // Render game view
-            render();
-        }
-
+        
         // Perform cleanup tasks
         endGame();
     }
 
     private void initializeGame() {
+      GameLoop lp = new GameLoop();
+      Thread loop = new Thread(lp);
+      loop.start();
+
       new MainMenu(handler);
       //SwingUtilities.invokeLater(() -> new SplashScreen());
       
@@ -70,4 +62,23 @@ public class GameManager {
     private void endGame() {
         // Perform cleanup tasks such as releasing resources, saving game state, etc.
     }
+    
+    public class GameLoop implements Runnable {
+
+       @Override
+       public void run() {        
+           while (!gameState.isGameOver()) {
+               
+               processInput();
+               updateGameState();
+               render();
+               
+               try {
+                   Thread.sleep(1000); // Pause the thread for 1 second
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+           }
+       }
+   }
 }

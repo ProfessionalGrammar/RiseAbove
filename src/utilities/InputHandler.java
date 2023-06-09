@@ -1,15 +1,19 @@
 package utilities;
 
+import controllers.*;
 import models.*;
+import views.scenes.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class InputHandler implements KeyListener, ActionListener {
   private GameState state;
+  private GameManager gm;
   public boolean upPressed, downPressed, leftPressed, rightPressed, interact;
 
-  public InputHandler(GameState curState) {
+  public InputHandler(GameState curState, GameManager manager) {
     state = curState;
+    gm = manager;
   }
 
   @Override
@@ -69,10 +73,10 @@ public class InputHandler implements KeyListener, ActionListener {
   
   public void actionPerformed(ActionEvent e){
       String cmd = e.getActionCommand();
-      
+      Scene levels = LevelSelect();
       switch(cmd){
       case "Exit": state.setGameOver(true); break;
-      case "Play": state.setGameOver(true); break;
+      case "Play": gm.changeScene(levels); break;
       case "Instructions": state.setGameOver(true); break;
       case "Highscore": state.setGameOver(true); break;
       case "Credits": state.setGameOver(true); break;

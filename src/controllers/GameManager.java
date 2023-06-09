@@ -15,7 +15,7 @@ public class GameManager {
       
   public GameManager(){
     gameState = new GameState();
-    handler = new InputHandler(gameState);
+    handler = new InputHandler(gameState, this);
   }
   
   public void startGame() {
@@ -28,7 +28,7 @@ public class GameManager {
       //SwingUtilities.invokeLater(() -> new SplashScreen());
   }
   
-  private void changeScene(Scene newScene){
+  public void changeScene(Scene newScene){
       scene.endScene();
       newScene.display(handler);
   }

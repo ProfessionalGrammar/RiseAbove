@@ -11,8 +11,6 @@ public class MainMenu {
    
       JFrame frame = new JFrame ("Rise Above Mental Health Simulator: Menu");
       frame.setSize(1400, 800);
-   
-      
       frame.add(draw2);
       frame.setVisible(true);     
       

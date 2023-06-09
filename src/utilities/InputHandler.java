@@ -72,6 +72,10 @@ public class InputHandler implements KeyListener, ActionListener {
       
       switch(cmd){
       case "Exit": state.setGameOver(true); break;
+      case "Play": state.setGameOver(true); break;
+      case "Instructions": state.setGameOver(true); break;
+      case "Highscore": state.setGameOver(true); break;
+      case "Credits": state.setGameOver(true); break;
       }
   }
 }

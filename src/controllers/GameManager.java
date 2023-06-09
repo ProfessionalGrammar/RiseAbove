@@ -28,8 +28,9 @@ public class GameManager {
       //SwingUtilities.invokeLater(() -> new SplashScreen());
   }
   
-  private void changeScene(JFrame newScene){
-      
+  private void changeScene(Scene newScene){
+      scene.endScene();
+      newScene.display(handler);
   }
 
   private void processInput() {
@@ -51,7 +52,7 @@ public class GameManager {
 
   private void endGame() {
         // Perform cleanup tasks such as releasing resources, saving game state, etc.
-        
+        System.exit(0);
   }
     
   public class GameLoop implements Runnable {

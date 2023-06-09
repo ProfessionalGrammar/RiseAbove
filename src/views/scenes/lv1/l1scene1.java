@@ -7,10 +7,6 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
-
 public class l1scene1 extends Scene {
 
    JFrame frame;
@@ -23,28 +19,16 @@ public class l1scene1 extends Scene {
       JLayeredPane layeredPane = new JLayeredPane();
       draw.setBounds(0, 0, 1400, 800);  
       layeredPane.add(draw, Integer.valueOf(-1));
-      
-      frame.add(layeredPane);
-
-        JLabel label = new JLabel("Hello, World!");
-        label.setBounds(50, 600, 1300, 200);
-        label.setBackground(new Color(0, 0, 0, 128)); // Set translucent background
-        label.setForeground(Color.BLACK);
-
-    
-    
-        label.setFont(new Font("Book Antiqua", Font.PLAIN, 25));
-
-
-        layeredPane.add(label, Integer.valueOf(1));
-
-        
+            
         frame.add(layeredPane);
         frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.addKeyListener(handler);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
+   }
    
-   
-   
+   public Scene getNextScene(){
+      System.out.println("getting next");
+      return (new l1scene2());
    }
    
    public class DrawingCar extends JComponent {
@@ -178,13 +162,11 @@ public class l1scene1 extends Scene {
          fillShape(g,skin2,ear1);
          
          // draws the white box for the game prologue's text
-         /*
-         g.setColor(sky1);
-         g.fillRect(670, 60, 565, 517);
-         
-         */
-         
-         // ^temporary bounding box for the game prologue text
+         g.setColor(Color.white);
+          g.setFont(new Font("Roboto", Font.PLAIN, 40));
+          g.drawString("Level 1: A Miserable Morning", 725, 500);
+          g.setFont(new Font("Roboto", Font.PLAIN, 24));
+          g.drawString("Press Any Key to Continue", 900, 550);
          
       
       
@@ -255,8 +237,7 @@ public class l1scene1 extends Scene {
          
          g.setColor(Color.black);
          g.drawPolygon(arrayPolyX, arrayPolyY, arrayPolyX.length);    
-      
-      
+         
       }
    }
 }

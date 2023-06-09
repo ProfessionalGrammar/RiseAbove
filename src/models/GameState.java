@@ -8,6 +8,7 @@ public class GameState {
     private static boolean is2D;
     private static boolean isPointClick;
     private static boolean isCorrectAns;
+    private static boolean isSceneDone;
         
     public GameState() {
         score = 0;
@@ -23,6 +24,14 @@ public class GameState {
 
     public static void increaseScore(int points) {
         score += points;
+    }
+    
+    public static boolean getIsSceneDone() {
+        return isSceneDone;
+    }
+
+    public static void setIsSceneDone(boolean sceneState) {
+        isSceneDone = sceneState;
     }
 
     public static boolean isGameOver() {

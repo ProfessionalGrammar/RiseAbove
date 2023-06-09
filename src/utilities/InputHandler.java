@@ -19,15 +19,16 @@ public class InputHandler implements KeyListener, ActionListener {
     gm = manager;
   }
 
-  @Override
   public void keyTyped(KeyEvent e) {
 
   }
 
-  @Override
   public void keyPressed(KeyEvent e) {
     int code = e.getKeyCode();
-
+    
+    System.out.println("input next");
+    gm.getNextScene();
+    
     if (state.is2D()) {
       if (code == KeyEvent.VK_W) {
         upPressed = true;
@@ -47,7 +48,6 @@ public class InputHandler implements KeyListener, ActionListener {
     }
   }
 
-  @Override
   public void keyReleased(KeyEvent e) {
     int code = e.getKeyCode();
 

@@ -40,6 +40,11 @@ public class GameManager {
       scene = newScene;
   }
   
+  public void getNextScene(){
+      System.out.println("setting next");
+      changeScene(scene.getNextScene());
+  }
+  
   public void nextText(){
    scene.nextText();
   }

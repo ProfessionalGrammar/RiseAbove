@@ -10,9 +10,12 @@ public abstract class Scene {
    public int dialogueCounter;
    
    public abstract void display(InputHandler handler);
+   public abstract Scene getNextScene();
    
    public void endScene(){
-      frame.dispose();
+      if (frame != null) {
+            frame.dispose();
+        }
    }
    
    public void nextText(){
@@ -21,5 +24,4 @@ public abstract class Scene {
          dialogueCounter++;
       }
    }
-   
 }

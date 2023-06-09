@@ -12,7 +12,7 @@ import java.util.List;
 
 
 
-public class l1scene3 {
+public class l1scene3 extends Scene {
 
    JFrame frame;
    DrawingRoom draw = new DrawingRoom();
@@ -25,6 +25,10 @@ public class l1scene3 {
       frame.add(draw);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          
+   }
+   
+   public Scene getNextScene(){
+      return null;
    }
    
    public class DrawingRoom extends JComponent {

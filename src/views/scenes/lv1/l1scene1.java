@@ -27,7 +27,6 @@ public class l1scene1 extends Scene {
    }
    
    public Scene getNextScene(){
-      System.out.println("getting next");
       return (new l1scene2());
    }
    

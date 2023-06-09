@@ -25,30 +25,20 @@ public class GameManager {
       Thread loop = new Thread(lp);
       loop.start();
       
-      SwingUtilities.invokeLater(() -> new SplashScreen());
-      System.out.println(SplashScreen.endS1);
-        
-      boolean tempWhile = true;
-      
-      while (tempWhile) {
-        
-        
-      
-      
-         if (SplashScreen.endS1 == true){
-            tempWhile = false;
-            scene = new MainMenu();
-            scene.display(handler);
-         }
-         
-         System.out.println(SplashScreen.endS1);
-      }
+      //SwingUtilities.invokeLater(() -> new SplashScreen());
+       scene = new MainMenu();
+       scene.display(handler);
    }
   
    public void changeScene(Scene newScene){
       scene.endScene();
       newScene.display(handler);
       scene = newScene;
+   }
+   
+   public void getNextScene(){
+      System.out.println("going to next scene");
+      changeScene(scene.getNextScene());
    }
   
    public void nextText(){

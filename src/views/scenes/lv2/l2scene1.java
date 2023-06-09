@@ -39,8 +39,6 @@ public class l2scene1 extends Scene{
         frame.setVisible(true);
         frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-     }
-
    }
    
    public class DrawingBack extends JComponent {
@@ -48,10 +46,11 @@ public class l2scene1 extends Scene{
       public DrawingBack () {
       
       }
+      
       public void paint(Graphics g){
-      g.setColor(Color.WHITE);
-       g.fillRect(0,0,1400,800);
+          g.setColor(Color.WHITE);
+         g.fillRect(0,0,1400,800);
        }
-       }
+    }
 }
 

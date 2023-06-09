@@ -10,8 +10,9 @@ public abstract class Scene {
    public int dialogueCounter;
    
    public abstract void display(InputHandler handler);
-   public abstract Scene getNextScene();
    
+   public abstract Scene getNextScene();
+         
    public void endScene(){
       if (frame != null) {
             frame.dispose();

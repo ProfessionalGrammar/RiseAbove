@@ -26,7 +26,6 @@ public class InputHandler implements KeyListener, ActionListener {
   public void keyPressed(KeyEvent e) {
     int code = e.getKeyCode();
     
-    System.out.println("input next");
     gm.getNextScene();
     
     if (state.is2D()) {

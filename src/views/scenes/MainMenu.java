@@ -6,9 +6,9 @@ import javax.swing.*;
 import java.awt.Graphics;
 import javax.swing.JComponent;
 
-public class MainMenu {
+public class MainMenu extends Scene {
 
-   public MainMenu (InputHandler handler) {
+   public void display (InputHandler handler) {
       DrawingOfMenu draw2 = new DrawingOfMenu();
       
       JFrame frame = new JFrame("Rise Above Mental Health Simulator: Menu");

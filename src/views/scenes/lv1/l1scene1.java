@@ -14,15 +14,34 @@ public class l1scene1 {
    JFrame frame;
    DrawingCar draw = new DrawingCar();
 
-   public l1scene1 () {
+   public void display () {
    
       frame = new JFrame ("Rise Above Mental Health Simulator: Intro Scene");
       frame.setSize(1400,800);
-      frame.setVisible(true);
-      frame.add(draw);
-      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      JLayeredPane layeredPane = new JLayeredPane();
+      draw.setBounds(0, 0, 1400, 800);  
+      layeredPane.add(draw, Integer.valueOf(-1));
       
       
+      frame.add(layeredPane);
+
+
+        JLabel label = new JLabel("Hello, World!");
+        label.setBounds(50, 600, 1300, 200);
+        label.setBackground(new Color(0, 0, 0, 128)); // Set translucent background
+        label.setForeground(Color.BLACK);
+
+    
+    
+        label.setFont(new Font("Book Antiqua", Font.PLAIN, 25));
+
+
+        layeredPane.add(label, Integer.valueOf(1));
+
+        
+        frame.add(layeredPane);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    
    
    

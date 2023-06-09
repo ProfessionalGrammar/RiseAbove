@@ -1,4 +1,7 @@
 package views.scenes.lv1;
+
+import views.scenes.*;
+import utilities.*;
 import java.awt.*;
 import javax.swing.*;
 import java.util.ArrayList;
@@ -14,7 +17,7 @@ public class l1scene3 {
    JFrame frame;
    DrawingRoom draw = new DrawingRoom();
 
-   public void display () {
+   public void display (InputHandler handler) {
    
       frame = new JFrame ("Rise Above Mental Health Simulator: Therapist Session no. 1");
       frame.setSize(1400,800);

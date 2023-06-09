@@ -23,7 +23,7 @@ public class GameManager {
       Thread loop = new Thread(lp);
       loop.start();
       
-      scene = new MainMenu();
+      scene = new l1scene2();
       scene.display(handler);
       //SwingUtilities.invokeLater(() -> new SplashScreen());
   }

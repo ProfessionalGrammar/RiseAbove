@@ -22,9 +22,7 @@ public class l1scene1 {
       draw.setBounds(0, 0, 1400, 800);  
       layeredPane.add(draw, Integer.valueOf(-1));
       
-      
       frame.add(layeredPane);
-
 
         JLabel label = new JLabel("Hello, World!");
         label.setBounds(50, 600, 1300, 200);
@@ -259,14 +257,4 @@ public class l1scene1 {
       
       }
    }
-   
-   
-   
-   public static void main (String [] args) {
-   
-      new l1scene1();
-   }
-
-
-
 }

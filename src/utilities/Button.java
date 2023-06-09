@@ -4,9 +4,8 @@ import javax.swing.JButton;
 
 public class Button extends JButton {
 
-  public Button(int x, int y, int width, int height, String fileName, String command, InputHandler handler) {
+  public Button(int x, int y, int width, int height, InputHandler handler, String command\) {
     setBounds(x, y, width, height);
-    setOpaque(false);
     addActionListener(handler);
     setActionCommand(command);
   }

@@ -14,7 +14,7 @@ public class MainMenu {
       frame.setSize(1400, 800);
       frame.add(draw2);
       
-      Button Play = new Button();
+      Button Play = new Button(490, 500, 100, 100, "Play");
       Button Instructions = new Button(); 
       Button Highscore = new Button(); 
       Button Credits = new Button(); 
@@ -168,12 +168,12 @@ public class MainMenu {
          g.fillPolygon(rayX2, rayY2, rayX2.length);
          
          g.setColor(Color.black);
-         Font boldFont = new Font("Arial", Font.BOLD, 36);
+         Font boldFont = new Font("Arial", Font.BOLD, 56);
          g.setFont(boldFont);
-         g.drawString("Rise Above", 500, 70);
-         Font newFont = new Font("Arial", Font.PLAIN, 28);
+         g.drawString("Rise Above", 480, 120);
+         Font newFont = new Font("Arial", Font.PLAIN, 42);
          g.setFont(newFont);
-         g.drawString("Main Menu", 500, 120);
+         g.drawString("Main Menu", 500, 180);
       }
    }
 }

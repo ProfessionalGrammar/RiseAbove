@@ -14,7 +14,7 @@ public class l1scene3 {
    JFrame frame;
    DrawingRoom draw = new DrawingRoom();
 
-   public l1scene3 () {
+   public void display () {
    
       frame = new JFrame ("Rise Above Mental Health Simulator: Therapist Session no. 1");
       frame.setSize(1400,800);

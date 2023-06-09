@@ -14,12 +14,12 @@ public class l1scene2 extends Scene {
 
    public void display (InputHandler handler) {
    
-      frame = new JFrame ("Rise Above Mental Health Simulator: Therapist Session no. 1");
+      frame = new JFrame ("Rise Above Mental Health Simulator: Mingame");
       frame.setSize(1400,800);
       
-      dialogue = new String[] {"How have you been doing?", "Good to hear that.", "I love pizza.", "That's a good idea!", "Trying to get better!"};
+      /*dialogue = new String[] {"How have you been doing?", "Good to hear that.", "I love pizza.", "That's a good idea!", "Trying to get better!"};
       dialogueBox = new TextBox(dialogue[0], 50, 600, 1300, 200);
-      dialogueCounter++;
+      dialogueCounter++;*/
       
       JLayeredPane layeredPane = new JLayeredPane();
       draw.setBounds(0, 0, 1400, 800);  
@@ -39,6 +39,8 @@ public class l1scene2 extends Scene {
         frame.setVisible(true);
         frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     
+
      
    }
    

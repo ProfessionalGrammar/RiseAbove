@@ -8,19 +8,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class l2scene1 extends Scene{
-   
+
    JFrame frame;
    DrawingBack draw = new DrawingBack();
-
+   
    public void display (InputHandler handler) {
-   frame = new JFrame ("Rise Above Mental Health Simulator: Quiz Minigame");
+   
+      frame = new JFrame ("Rise Above Mental Health Simulator: Intro Scene");
       frame.setSize(1400,800);
-
-   JLayeredPane layeredPane = new JLayeredPane();
+      JLayeredPane layeredPane = new JLayeredPane();
       draw.setBounds(0, 0, 1400, 800);  
       layeredPane.add(draw, Integer.valueOf(-1));
-
+            
+        frame.add(layeredPane);
+        frame.setVisible(true);
+        frame.addKeyListener(handler);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
    }
+
+   
    
    public class DrawingBack extends JComponent {
    
@@ -31,6 +37,6 @@ public class l2scene1 extends Scene{
       g.setColor(Color.WHITE);
        g.fillRect(0,0,1400,800);
        }
-       }
-
+       
 }
+

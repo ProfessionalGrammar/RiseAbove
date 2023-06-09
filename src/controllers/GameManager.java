@@ -34,8 +34,9 @@ public class GameManager {
       scene = newScene;
   }
   
-  public void setText(){
-   scene.setText();
+  public void nextText(){
+   System.out.println("managing next");
+   scene.nextText();
   }
 
   private void processInput() {

@@ -6,7 +6,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-package utilities.
 
 public class Minigame extends JPanel {
     private JPanel panel;

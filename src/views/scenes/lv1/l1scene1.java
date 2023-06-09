@@ -1,14 +1,20 @@
+package views.scenes.lv1;
+
 import java.awt.*;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class l1scene1 extends Scene{
+
+
+
+
+public class l1scene1 {
 
    JFrame frame;
    DrawingCar draw = new DrawingCar();
 
-   public Scene1CarModded () {
+   public l1scene1 () {
    
       frame = new JFrame ("Rise Above Mental Health Simulator: Intro Scene");
       frame.setSize(1400,800);
@@ -162,7 +168,10 @@ public class l1scene1 extends Scene{
          // ^temporary bounding box for the game prologue text
          
       
+      
       }
+      
+      
       
       public void fillShape (Graphics g, Color tempColor, int[] coords ) { // method to simplify the polygon drawing in Java. draws polygons based off coordinates inputted         
          boolean isX = true;
@@ -236,7 +245,7 @@ public class l1scene1 extends Scene{
    
    public static void main (String [] args) {
    
-      new Scene1CarModded();
+      new l1scene1();
    }
 
 

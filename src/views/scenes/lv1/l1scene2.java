@@ -3,19 +3,42 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class l1scene2 extends Scene {
+public class l1scene2 {
 
    JFrame frame;
    DrawingRoom draw = new DrawingRoom();
 
-   public Scene2 () {
+   public l1scene2 () {
    
       frame = new JFrame ("Rise Above Mental Health Simulator: Therapist Session no. 1");
       frame.setSize(1400,800);
-      frame.setVisible(true);
-      frame.add(draw);
-      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-         
+      
+      JLayeredPane layeredPane = new JLayeredPane();
+      draw.setBounds(0, 0, 1400, 800);  
+      layeredPane.add(draw, Integer.valueOf(-1));
+      
+    
+      frame.add(layeredPane);
+
+
+        JLabel label = new JLabel("Hello, World!");
+        label.setBounds(50, 600, 1300, 200);
+        label.setBackground(new Color(0, 0, 0, 128)); // Set translucent background
+        label.setForeground(Color.BLACK);
+
+    
+    
+        label.setFont(new Font("Book Antiqua", Font.PLAIN, 25));
+
+
+        layeredPane.add(label, Integer.valueOf(1));
+
+        
+        frame.add(layeredPane);
+        frame.setVisible(true);
+        
+      
+     
    }
    
    public class DrawingRoom extends JComponent {
@@ -23,7 +46,8 @@ public class l1scene2 extends Scene {
       public DrawingRoom () {
       
       }
-      public void paint(Graphics g){  
+      public void paint(Graphics g){ 
+       
       
       // draws background wall color
       
@@ -167,6 +191,10 @@ public class l1scene2 extends Scene {
       
       
       
+      //text box 
+      Color textbox = new Color(173, 216, 230, 128);
+      int [] textboxcoords = {50,600, 50, 770, 1350, 770, 1350, 600};
+      fillShape(g, textbox, textboxcoords);
       
       
       }
@@ -243,7 +271,7 @@ public class l1scene2 extends Scene {
    
    public static void main (String [] args) {
    
-      new Scene2();
+      new l1scene2();
    }
 
 

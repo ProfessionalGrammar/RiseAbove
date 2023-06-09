@@ -7,6 +7,7 @@ Description: Submission of semi-functional splash screen animation.
 */
 
 package views.scenes;   
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -14,6 +15,7 @@ import javax.swing.*;
 public class SplashScreen {
 
    private static boolean splashFinished  = false;
+   public static boolean endS1 = false;
 
 
    public SplashScreen() {
@@ -25,14 +27,17 @@ public class SplashScreen {
       frame.setVisible(true);
       
       
+      
       frame.addKeyListener(
          new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
             
                if (splashFinished ){ 
+                  endS1 = true;
                   
                   frame.dispose(); // Close the JFrame
+                  
                }
             }
          });

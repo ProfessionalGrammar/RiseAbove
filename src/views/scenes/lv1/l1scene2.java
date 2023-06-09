@@ -12,15 +12,14 @@ public class l1scene2 {
    JFrame frame;
    DrawingRoom draw = new DrawingRoom();
 
-   public l1scene2 () {
+   public l1scene2 (InputHandler handler) {
    
       frame = new JFrame ("Rise Above Mental Health Simulator: Therapist Session no. 1");
       frame.setSize(1400,800);
-      
       JLayeredPane layeredPane = new JLayeredPane();
       draw.setBounds(0, 0, 1400, 800);  
       layeredPane.add(draw, Integer.valueOf(-1));
-      frame.add(layeredPane);
+      
       
       
 
@@ -35,12 +34,14 @@ public class l1scene2 {
         
         
         JPanel buttonPanel = new JPanel(); // JPanel to hold buttons
-        GameButton playButton = new GameButton("Next", 490, 500, 100, 100, handler);
-        buttonPanel.add(playButton);
-        frame.add(buttonPanel, Integer.valueOf(2));
-
+        buttonPanel.setBounds(1250, 600, 100, 100);
+        GameButton nextButton = new GameButton("Next", 1250, 600, 100, 100, handler);
+        buttonPanel.add(nextButton);
+        layeredPane.add(buttonPanel, Integer.valueOf(2));
+        
         frame.add(layeredPane);
         frame.setVisible(true);
+        frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
       
@@ -275,11 +276,12 @@ public class l1scene2 {
    
    
    
-   public static void main (String [] args) {
+  /* public static void main (String [] args) {
    
-      new l1scene2();
+      new l1scene2(handler);
    }
-
+*/
 
 
 }
+

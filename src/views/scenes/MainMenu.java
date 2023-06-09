@@ -1,5 +1,6 @@
 package views.scenes;
 
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -12,6 +13,13 @@ public class MainMenu {
       JFrame frame = new JFrame ("Rise Above Mental Health Simulator: Menu");
       frame.setSize(1400, 800);
       frame.add(draw2);
+      
+      Button Play = new Button();
+      Button Instructions = new Button(); 
+      Button Highscore = new Button(); 
+      Button Credits = new Button(); 
+      Button Exit = new Button();
+ 
       frame.setVisible(true);     
       
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
@@ -159,6 +167,13 @@ public class MainMenu {
          int[] rayY2 = {303, 0, 0, 231, 0, 0, 357};
          g.fillPolygon(rayX2, rayY2, rayX2.length);
          
+         g.setColor(Color.black);
+         Font boldFont = new Font("Arial", Font.BOLD, 36);
+         g.setFont(boldFont);
+         g.drawString("Rise Above", 500, 70);
+         Font newFont = new Font("Arial", Font.PLAIN, 28);
+         g.setFont(newFont);
+         g.drawString("Main Menu", 500, 120);
       }
    }
 }

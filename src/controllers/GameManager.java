@@ -35,8 +35,8 @@ public class GameManager {
     }
 
     private void initializeGame() {
-      
-      SwingUtilities.invokeLater(() -> new SplashScreen());
+      new MainMenu();
+      //SwingUtilities.invokeLater(() -> new SplashScreen());
       
       //levels[0] = new Level();
       //levels[1] = new Level1();

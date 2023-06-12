@@ -39,6 +39,10 @@ public class LevelSelect extends Scene {
       frame.setLayout(null);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    }
+   
+   public Scene getNextScene() {
+	   return null;
+   }
       
    public static class DrawingOfMenu extends JComponent {
    

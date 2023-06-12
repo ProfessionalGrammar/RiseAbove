@@ -183,5 +183,9 @@ public class Credits extends Scene {
 
       }
    }
+   
+   public Scene getNextScene() {
+	   return null;
+   }
 }
 

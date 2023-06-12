@@ -41,6 +41,10 @@ public class l2scene1 extends Scene{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    }
    
+   public Scene getNextScene(){
+      return null;
+   }
+   
    public class DrawingBack extends JComponent {
    
       public DrawingBack () {

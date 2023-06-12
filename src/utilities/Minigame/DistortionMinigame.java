@@ -1,4 +1,0 @@
-
-public DistortionMinigame extends Minigame {
-  
-}

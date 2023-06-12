@@ -1,5 +1,4 @@
 package models;
-import controllers.*;
 
 public class GameState {
     private static int score;

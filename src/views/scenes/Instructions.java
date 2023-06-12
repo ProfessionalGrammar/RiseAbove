@@ -30,6 +30,10 @@ public class Instructions extends Scene {
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    }
       
+   public Scene getNextScene() {
+	   return null;
+   }
+   
    public static class DrawingOfMenu extends JComponent {
    
    

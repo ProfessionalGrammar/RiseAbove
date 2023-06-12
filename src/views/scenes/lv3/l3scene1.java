@@ -11,6 +11,11 @@ public class l3scene1 extends Scene{
    
    }
    
+   public Scene getNextScene() {
+	   return null;
+	
+   }
+   
    public void paint(Graphics g) {
      g.drawString("l2scene1", 0, 0);
    }

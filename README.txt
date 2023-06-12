@@ -1,0 +1,1 @@
+This is a game called RiseAbove, created by Synthesis Creations. This is a game about depression and overcoming it through the use of cognitive behavioural therapy. Open the file named RiseAbove, and run it to play the game. Have Fun!

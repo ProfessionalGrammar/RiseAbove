@@ -18,7 +18,7 @@ public class l1scene2 extends Scene {
       frame.setSize(1400,800);
       
       dialogue = new String[] {"How have you been doing?", "Good to hear that.", "I love pizza.", "That's a good idea!", "Trying to get better!"};
-      dialogueBox = new TextBox(dialogue[0], 50, 600, 1300, 200);
+      dialogueBox = new TextBox(dialogue[0], 50, 700, 1300, 200);
       dialogueCounter++;
       
       JLayeredPane layeredPane = new JLayeredPane();
@@ -28,8 +28,8 @@ public class l1scene2 extends Scene {
         
       JPanel buttonPanel = new JPanel(); // JPanel to hold buttons
       buttonPanel.setOpaque(false);
-      buttonPanel.setBounds(1250, 600, 100, 100);
-      GameButton nextButton = new GameButton("Next", "NextDialogue", 1250, 600, 100, 100, handler);
+      buttonPanel.setBounds(1250, 700, 100, 100);
+      GameButton nextButton = new GameButton("Next", "NextDialogue", 1250, 700, 100, 100, handler);
       nextButton.setOpaque(true);
       buttonPanel.add(nextButton);
       layeredPane.add(buttonPanel, Integer.valueOf(2));
@@ -196,8 +196,8 @@ public class l1scene2 extends Scene {
       
       
       //text box 
-      Color textbox = new Color(173, 216, 230, 128);
-      int [] textboxcoords = {50,600, 50, 770, 1350, 770, 1350, 600};
+      Color textbox = new Color(173, 216, 230);
+      int [] textboxcoords = {50,700, 50, 770, 1350, 770, 1350, 700};
       fillShape(g, textbox, textboxcoords);
       
       
